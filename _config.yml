@@ -1,0 +1,73 @@
+# VulnQuest Portfolio Configuration
+title: VulnQuest
+description: "Offensive Security Portfolio - Bug Bounty | Red Teaming | Tools Development | CTF"
+author: "VulnQuest58"
+email: "contact@vulnquest.com"
+url: "https://vulnquest58.github.io"
+baseurl: ""
+lang: en
+timezone: UTC
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title/
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# Kramdown settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  auto_ids: true
+  toc_levels: 1..6
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-include-cache
+
+# Social links
+social:
+  name: VulnQuest58
+  links:
+    - https://github.com/vulnquest58
+    - https://twitter.com/vulnquest58
+    - https://linkedin.com/in/vulnquest58
+
+# Collections
+collections:
+  writeups:
+    output: true
+    permalink: /writeups/:path/
+  tools:
+    output: true
+    permalink: /tools/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "VulnQuest58"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git/
+  - README.md
+  - LICENSE
+  - CONTRIBUTING.md

@@ -1,0 +1,27 @@
+<header class="site-header">
+  <div class="container">
+    <nav class="navbar">
+      <a href="{{ '/' | relative_url }}" class="logo">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">VulnQuest</span>
+      </a>
+      
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul class="nav-menu">
+        <li><a href="{{ '/' | relative_url }}"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="{{ '/bugbounty/' | relative_url }}"><i class="fas fa-bug"></i> Bug Bounty</a></li>
+        <li><a href="{{ '/redteam/' | relative_url }}"><i class="fas fa-user-ninja"></i> Red Team</a></li>
+        <li><a href="{{ '/tools/' | relative_url }}"><i class="fas fa-tools"></i> Tools</a></li>
+        <li><a href="{{ '/ctf/' | relative_url }}"><i class="fas fa-flag"></i> CTF</a></li>
+        <li><a href="{{ '/labs/' | relative_url }}"><i class="fas fa-flask"></i> Labs</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}"><i class="fas fa-blog"></i> Blog</a></li>
+        <li><a href="{{ '/about/' | relative_url }}"><i class="fas fa-user"></i> About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

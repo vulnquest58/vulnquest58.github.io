@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header">
+    <div class="container">
+      {% if page.category %}
+        <span class="post-category">{{ page.category }}</span>
+      {% endif %}
+      <h1 class="post-title">{{ page.title }}</h1>
+      <div class="post-meta">
+        <span><i class="far fa-calendar"></i> {{ page.date | date: "%B %d, %Y" }}</span>
+        {% if page.author %}
+          <span><i class="far fa-user"></i> {{ page.author }}</span>
+        {% endif %}
+        {% if page.tags.size > 0 %}
+          <span class="post-tags">
+            {% for tag in page.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </span>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+  
+  <div class="post-content container">
+    {{ content }}
+  </div>
+  
+  <footer class="post-footer">
+    <div class="container">
+      <div class="post-share">
+        <span>Share:</span>
+        <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url | url_encode }}" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url | url_encode }}&title={{ page.title | url_encode }}" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+</article>
+```
+
+---
+
+## 📁 4. Includes

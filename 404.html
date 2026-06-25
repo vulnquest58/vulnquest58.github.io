@@ -1,0 +1,230 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Signal Lost | VulnQuest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080c1a;
+      --surface: #0d1229;
+      --border: #1e2a4a;
+      --green: #00ff88;
+      --red: #ff4757;
+      --blue: #4ecdc4;
+      --yellow: #ffa502;
+      --text: #c8d6f0;
+      --dim: #5a6a8a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Animated grid background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,255,136,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,136,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Scan line animation */
+    body::after {
+      content: '';
+      position: fixed;
+      top: -100%;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background: linear-gradient(transparent 50%, rgba(0,255,136,0.015) 50%);
+      background-size: 100% 4px;
+      animation: scanlines 8s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes scanlines {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(100%); }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 90%;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .terminal-window {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 60px rgba(0,255,136,0.05), 0 0 120px rgba(0,0,0,0.5);
+    }
+
+    .terminal-titlebar {
+      background: #0a0f1f;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .terminal-dot {
+      width: 12px; height: 12px;
+      border-radius: 50%;
+    }
+    .dot-red    { background: #ff5f57; }
+    .dot-yellow { background: #ffbd2e; }
+    .dot-green  { background: #28ca41; }
+
+    .terminal-title {
+      flex: 1;
+      text-align: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--dim);
+    }
+
+    .terminal-body {
+      padding: 32px 40px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      line-height: 1.8;
+      text-align: left;
+    }
+
+    .prompt { color: var(--green); }
+    .cmd    { color: var(--text); }
+    .error  { color: var(--red); }
+    .info   { color: var(--blue); }
+    .warn   { color: var(--yellow); }
+
+    .big-404 {
+      font-size: clamp(80px, 15vw, 140px);
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--green);
+      text-shadow: 0 0 30px rgba(0,255,136,0.4);
+      line-height: 1;
+      margin: 8px 0 16px;
+      animation: glitch 4s infinite;
+    }
+
+    @keyframes glitch {
+      0%, 90%, 100% { text-shadow: 0 0 30px rgba(0,255,136,0.4); transform: none; }
+      91% { text-shadow: -4px 0 var(--red), 4px 0 var(--blue); transform: skewX(-1deg); }
+      93% { text-shadow: 4px 0 var(--red), -4px 0 var(--blue); transform: skewX(1deg); }
+      95% { text-shadow: 0 0 30px rgba(0,255,136,0.4); transform: none; }
+    }
+
+    .blink {
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .actions {
+      margin-top: 32px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: rgba(0,255,136,0.1);
+      color: var(--green);
+      border-color: rgba(0,255,136,0.3);
+    }
+    .btn-primary:hover {
+      background: rgba(0,255,136,0.2);
+      box-shadow: 0 0 20px rgba(0,255,136,0.15);
+    }
+
+    .btn-secondary {
+      background: rgba(78,205,196,0.1);
+      color: var(--blue);
+      border-color: rgba(78,205,196,0.3);
+    }
+    .btn-secondary:hover {
+      background: rgba(78,205,196,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="terminal-window">
+      <div class="terminal-titlebar">
+        <span class="terminal-dot dot-red"></span>
+        <span class="terminal-dot dot-yellow"></span>
+        <span class="terminal-dot dot-green"></span>
+        <span class="terminal-title">vulnquest@portfolio:~$ — zsh</span>
+      </div>
+      <div class="terminal-body">
+        <p><span class="prompt">vulnquest@portfolio:~$</span> <span class="cmd">curl -s {{ page.url | default: request.path }}</span></p>
+        <p>&nbsp;</p>
+        <div class="big-404">404</div>
+        <p><span class="error">[!] ERROR: Target not found</span></p>
+        <p><span class="info">[*] Initiating fallback sequence...</span></p>
+        <p>&nbsp;</p>
+        <p><span class="warn">[~] Possible causes:</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="dim">→</span> Page was moved or deleted</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="dim">→</span> The URL was mistyped or corrupted</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="dim">→</span> This resource is classified (access denied)</p>
+        <p>&nbsp;</p>
+        <p><span class="prompt">vulnquest@portfolio:~$</span> <span class="cmd">navigate --home<span class="blink">_</span></span></p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a href="{{ '/' | relative_url }}" class="btn btn-primary">
+        ↩ Return to Base
+      </a>
+      <a href="{{ '/bugbounty/' | relative_url }}" class="btn btn-secondary">
+        🐛 Bug Bounty
+      </a>
+      <a href="{{ '/ctf/' | relative_url }}" class="btn btn-secondary">
+        🚩 CTF
+      </a>
+    </div>
+  </div>
+</body>
+</html>
