@@ -1,6 +1,6 @@
 // VulnQuest Portfolio - Main JavaScript
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   initMobileMenu();
   initSmoothScroll();
   initScrollAnimations();
@@ -11,15 +11,15 @@ document.addEventListener('DOMContentLoaded', function() {
 function initMobileMenu() {
   const menuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.nav-menu');
-  
+
   if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', function() {
+    menuToggle.addEventListener('click', function () {
       navMenu.classList.toggle('active');
       this.classList.toggle('active');
     });
-    
+
     // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
       if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
         navMenu.classList.remove('active');
         menuToggle.classList.remove('active');
@@ -31,7 +31,7 @@ function initMobileMenu() {
 // Smooth Scroll
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
       if (target) {
@@ -50,8 +50,8 @@ function initScrollAnimations() {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
   };
-  
-  const observer = new IntersectionObserver(function(entries) {
+
+  const observer = new IntersectionObserver(function (entries) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.style.opacity = '1';
@@ -59,7 +59,7 @@ function initScrollAnimations() {
       }
     });
   }, observerOptions);
-  
+
   document.querySelectorAll('.card, .section').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
@@ -72,15 +72,15 @@ function initScrollAnimations() {
 function initSearch() {
   const searchInput = document.querySelector('.search-input');
   if (!searchInput) return;
-  
-  searchInput.addEventListener('input', function(e) {
+
+  searchInput.addEventListener('input', function (e) {
     const query = e.target.value.toLowerCase();
     const cards = document.querySelectorAll('.card');
-    
+
     cards.forEach(card => {
       const title = card.querySelector('.card-title')?.textContent.toLowerCase() || '';
       const description = card.querySelector('.card-description')?.textContent.toLowerCase() || '';
-      
+
       if (title.includes(query) || description.includes(query)) {
         card.style.display = 'block';
       } else {
@@ -96,7 +96,7 @@ function addCopyButtons() {
     const button = document.createElement('button');
     button.className = 'copy-button';
     button.innerHTML = '<i class="far fa-copy"></i> Copy';
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
       const code = pre.querySelector('code').textContent;
       navigator.clipboard.writeText(code).then(() => {
         button.innerHTML = '<i class="fas fa-check"></i> Copied!';
@@ -121,8 +121,3 @@ if (document.readyState === 'complete') {
 console.log('%c🛡️ VulnQuest Portfolio', 'font-size: 24px; font-weight: bold; color: #00d9ff;');
 console.log('%cBuilt with passion for offensive security', 'font-size: 14px; color: #7c3aed;');
 console.log('%cLooking for vulnerabilities? You\'re in the right place! 🔍', 'font-size: 12px; color: #10b981;');
-```
-
----
-
-## 📁 7. الصفحة الرئيسية
