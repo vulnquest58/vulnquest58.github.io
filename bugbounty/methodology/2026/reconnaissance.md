@@ -39,3 +39,4 @@ We run recurring, containerized scans mapping open ports and web servers:
 - [Go to 2026 Enumeration Stage]({{ '/bugbounty/methodology/2026/enumeration/' | relative_url }})
 - [Return to 2026 Dashboard]({{ '/bugbounty/methodology/2026/' | relative_url }})
 
+

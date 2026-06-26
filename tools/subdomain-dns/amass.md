@@ -2,13 +2,13 @@
 layout: page
 title: "Tool Wiki: OWASP Amass"
 subtitle: "In-depth asset mapping and domain tracking engine"
-permalink: /tools/information-gathering/amass/
+permalink: /tools/subdomain-dns/amass/
 ---
 
 ## <span class="logo-text">OWASP Amass</span>
 
 <div class="tool-badges">
-  <span class="badge badge-info">Category: Information Gathering</span>
+  <span class="badge badge-info">Category: Subdomain Enumeration & DNS</span>
   <span class="badge badge-success">Language: Go</span>
   <span class="badge badge-warning">Type: Active & Passive</span>
 </div>

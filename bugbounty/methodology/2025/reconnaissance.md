@@ -10,7 +10,7 @@ permalink: /bugbounty/methodology/2025/reconnaissance/
 The 2025 reconnaissance model coordinates automated pipelines to instantly map out the target attack surface and identify active web servers.
 
 ### 🛠️ Continuous Recon Scripting
-We automate subdomain harvesting using [Subfinder]({{ '/tools/information-gathering/subfinder/' | relative_url }}) and [OWASP Amass]({{ '/tools/information-gathering/amass/' | relative_url }}):
+We automate subdomain harvesting using [Subfinder]({{ '/tools/subdomain-dns/subfinder/' | relative_url }}) and [OWASP Amass]({{ '/tools/subdomain-dns/amass/' | relative_url }}):
 
 ```bash
 # Combine passive data sources
@@ -20,7 +20,7 @@ cat subfinder.txt amass.txt | sort -u > all_subdomains.txt
 ```
 
 ### ⚡ Live Service Identification
-We run active port discovery using [Naabu]({{ '/tools/information-gathering/naabu/' | relative_url }}) and identify live web headers using `httpx`:
+We run active port discovery using [Naabu]({{ '/tools/recon-osint/naabu/' | relative_url }}) and identify live web headers using `httpx`:
 
 ```bash
 # Rapid port check
@@ -35,4 +35,5 @@ httpx -l live_ports.txt -sc -title -tech-detect -o live_web_assets.txt
 ### 🔗 Navigation
 - [Go to 2025 Enumeration Stage]({{ '/bugbounty/methodology/2025/enumeration/' | relative_url }})
 - [Return to 2025 Dashboard]({{ '/bugbounty/methodology/2025/' | relative_url }})
+
 

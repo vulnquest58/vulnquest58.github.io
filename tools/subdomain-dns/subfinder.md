@@ -2,13 +2,13 @@
 layout: page
 title: "Tool Wiki: Subfinder"
 subtitle: "Fast passive subdomain discovery engine"
-permalink: /tools/information-gathering/subfinder/
+permalink: /tools/subdomain-dns/subfinder/
 ---
 
 ## <span class="logo-text">Subfinder</span>
 
 <div class="tool-badges">
-  <span class="badge badge-info">Category: Information Gathering</span>
+  <span class="badge badge-info">Category: Subdomain Enumeration & DNS</span>
   <span class="badge badge-success">Language: Go</span>
   <span class="badge badge-warning">Type: Passive</span>
 </div>

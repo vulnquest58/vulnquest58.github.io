@@ -38,3 +38,4 @@ Actionable configuration files or source code changes.
 - [Return to 2026 Dashboard]({{ '/bugbounty/methodology/2026/' | relative_url }})
 - [Return to Methodology Hub]({{ '/bugbounty/methodology/' | relative_url }})
 
+

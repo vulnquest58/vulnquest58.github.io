@@ -10,7 +10,7 @@ permalink: /bugbounty/methodology/2024/enumeration/
 The 2024 enumeration phase focus is discovering hidden directories, parameters, and sensitive configuration endpoints.
 
 ### 📁 Directory Brute-Forcing
-We scan targets for administrative path exposures, directories, and configuration backups using [Gobuster]({{ '/tools/fuzzing/gobuster/' | relative_url }}):
+We scan targets for administrative path exposures, directories, and configuration backups using [Gobuster]({{ '/tools/web-security/gobuster/' | relative_url }}):
 
 ```bash
 # Gobuster directory fuzzing with standard wordlists
@@ -18,7 +18,7 @@ gobuster dir -u https://target.com -w common.txt -x php,html,txt,json
 ```
 
 ### 🔑 Parameter Discovery
-Finding hidden variables on the endpoint using [Arjun]({{ '/tools/fuzzing/arjun/' | relative_url }}):
+Finding hidden variables on the endpoint using [Arjun]({{ '/tools/web-security/arjun/' | relative_url }}):
 
 ```bash
 # Arjun scans GET endpoints for hidden parameters
@@ -36,4 +36,5 @@ We search the page source manually or extract endpoints to audit static logic:
 ### 🔗 Navigation
 - [Go to 2024 Vulnerability Analysis Stage]({{ '/bugbounty/methodology/2024/vulnerability-analysis/' | relative_url }})
 - [Return to 2024 Dashboard]({{ '/bugbounty/methodology/2024/' | relative_url }})
+
 
