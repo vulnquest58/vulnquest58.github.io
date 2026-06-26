@@ -1453,6 +1453,26 @@ tr:hover {
   margin-top: var(--spacing-sm);
 }
 
+.cc-btn {
+  display: inline-block;
+  align-self: flex-start;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 6px 16px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.cc-btn:hover {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+  border-color: transparent;
+  transform: translateY(-1px);
+}
+
 @media (max-width: 768px) {
   .machine-card {
     flex-direction: column;
