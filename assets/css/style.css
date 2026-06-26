@@ -5,24 +5,24 @@
 /* === Variables === */
 :root {
   /* Colors */
-  --bg-primary: #07060a;
-  --bg-secondary: #0d0c15;
-  --bg-tertiary: #141221;
-  --bg-card: #0f0d1b;
+  --bg-primary: #05080a;
+  --bg-secondary: #0a1114;
+  --bg-tertiary: #0f1a1f;
+  --bg-card: #0a1318;
   
-  --text-primary: #e5e4ee;
-  --text-secondary: #a3a0b8;
-  --text-muted: #6b6882;
+  --text-primary: #e1ece7;
+  --text-secondary: #9cb5a9;
+  --text-muted: #687e74;
   
-  --accent-primary: #9d4edd;
-  --accent-secondary: #ff007f;
+  --accent-primary: #00ff66;
+  --accent-secondary: #00e5ff;
   --accent-success: #00ff66;
   --accent-warning: #ffd600;
   --accent-danger: #ff1744;
   
-  --gradient-primary: linear-gradient(135deg, #9d4edd 0%, #ff007f 100%);
-  --gradient-dark: linear-gradient(135deg, #07060a 0%, #141221 100%);
-  --gradient-card: linear-gradient(135deg, rgba(157, 78, 221, 0.08) 0%, rgba(255, 0, 127, 0.08) 100%);
+  --gradient-primary: linear-gradient(135deg, #00ff66 0%, #00e5ff 100%);
+  --gradient-dark: linear-gradient(135deg, #05080a 0%, #0f1a1f 100%);
+  --gradient-card: linear-gradient(135deg, rgba(0, 255, 102, 0.08) 0%, rgba(0, 229, 255, 0.08) 100%);
   
   /* Typography */
   --font-primary: 'Inter', 'Cairo', sans-serif;
@@ -39,13 +39,13 @@
   /* Borders */
   --border-radius: 8px;
   --border-radius-lg: 12px;
-  --border-color: rgba(255, 255, 255, 0.06);
+  --border-color: rgba(0, 255, 102, 0.08);
   
   /* Shadows */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 20px rgba(157, 78, 221, 0.25);
+  --shadow-glow: 0 0 20px rgba(0, 255, 102, 0.25);
   
   /* Transitions */
   --transition: all 0.3s ease;
@@ -79,8 +79,8 @@ body::before {
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 20% 50%, rgba(157, 78, 221, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(255, 0, 127, 0.03) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(0, 255, 102, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(0, 229, 255, 0.03) 0%, transparent 50%);
   pointer-events: none;
   z-index: -1;
 }
@@ -103,7 +103,7 @@ body::before {
 
 /* === Header === */
 .site-header {
-  background: rgba(7, 6, 10, 0.95);
+  background: rgba(5, 8, 10, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
   position: sticky;
