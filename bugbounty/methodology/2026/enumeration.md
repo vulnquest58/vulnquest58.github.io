@@ -10,7 +10,7 @@ permalink: /bugbounty/methodology/2026/enumeration/
 The 2026 enumeration stage leverages Rust-based tools for speed, targeting hidden configurations and client-side JavaScript prototype layouts.
 
 ### ⚡ Rust-Based Parameter Fuzzing
-We run high-speed parameter guessing using [x8]({{ '/bugbounty/tools/fuzzing/x8/' | relative_url }}) to bypass typical rate limits and detect subtle headers:
+We run high-speed parameter guessing using [x8]({{ '/tools/fuzzing/x8/' | relative_url }}) to bypass typical rate limits and detect subtle headers:
 
 ```bash
 # High speed header and parameter checking
@@ -28,3 +28,4 @@ We scan repository routes for configuration leak files (`.gitlab-ci.yml`, `.gith
 ### 🔗 Navigation
 - [Go to 2026 Vulnerability Analysis Stage]({{ '/bugbounty/methodology/2026/vulnerability-analysis/' | relative_url }})
 - [Return to 2026 Dashboard]({{ '/bugbounty/methodology/2026/' | relative_url }})
+

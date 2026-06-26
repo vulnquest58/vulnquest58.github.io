@@ -2,7 +2,7 @@
 layout: page
 title: "Tool Wiki: FFUF"
 subtitle: "Fast web fuzzer for directory, virtual host, and parameter discovery"
-permalink: /bugbounty/tools/fuzzing/ffuf/
+permalink: /tools/fuzzing/ffuf/
 ---
 
 ## <span class="logo-text">FFUF (Fuzz Faster U Fool)</span>

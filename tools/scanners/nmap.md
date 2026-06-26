@@ -2,7 +2,7 @@
 layout: page
 title: "Tool Wiki: Nmap Scripting Engine (NSE)"
 subtitle: "Network exploration and vulnerability scripting framework"
-permalink: /bugbounty/tools/scanners/nmap/
+permalink: /tools/scanners/nmap/
 ---
 
 ## <span class="logo-text">Nmap Scripting Engine (NSE)</span>

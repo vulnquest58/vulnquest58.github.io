@@ -2,7 +2,7 @@
 layout: page
 title: "Tool Wiki: Nikto"
 subtitle: "Classic open-source web server scanner"
-permalink: /bugbounty/tools/scanners/nikto/
+permalink: /tools/scanners/nikto/
 ---
 
 ## <span class="logo-text">Nikto</span>

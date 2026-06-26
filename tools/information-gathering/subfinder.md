@@ -2,13 +2,13 @@
 layout: page
 title: "Tool Wiki: Subfinder"
 subtitle: "Fast passive subdomain discovery engine"
-permalink: /bugbounty/tools/recon/subfinder/
+permalink: /tools/information-gathering/subfinder/
 ---
 
 ## <span class="logo-text">Subfinder</span>
 
 <div class="tool-badges">
-  <span class="badge badge-info">Category: Reconnaissance</span>
+  <span class="badge badge-info">Category: Information Gathering</span>
   <span class="badge badge-success">Language: Go</span>
   <span class="badge badge-warning">Type: Passive</span>
 </div>

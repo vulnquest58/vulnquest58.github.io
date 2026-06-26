@@ -1,54 +1,70 @@
 ---
 layout: page
-title: Security Tools
-subtitle: Custom Offensive Security Tooling
-description: "Repository of custom tools and scripts developed to automate and support penetration testing and red teaming operations."
+title: "Offensive Security Tools"
+subtitle: "Professional toolkit organized by cybersecurity domains"
+permalink: /tools/
 ---
 
-## Developed Tools
+## Offensive Security Toolkit
 
-A collection of custom frameworks and automation scripts built for security operations.
+A centralized index of custom developed utilities, configurations, and industry-standard security tools mapped to security specialties.
 
 <div class="cards-grid">
-  <div class="card">
-    <div class="card-icon"><i class="fas fa-search"></i></div>
-    <h3 class="card-title">VULNTRACE</h3>
+
+  <!-- Special myrepo Card -->
+  <div class="card my-repo-card" style="border: 2px solid var(--accent-primary);">
+    <div class="card-icon">🛠️</div>
+    <h3 class="card-title">myrepo (مايريبو)</h3>
     <p class="card-description">
-      An advanced dynamic vulnerability analysis and code tracing utility that maps execution flows to find memory leaks and logical flaws.
+      In-house custom tools and developer automations including <strong>Vulntrace</strong> (syscall tracer), <strong>Kali Master</strong>, and <strong>Lab Manager</strong>.
     </p>
-    <a href="/tools/vulntrace/" class="card-link">View Repo</a>
+    <a href="{{ '/tools/my-repo/' | relative_url }}" class="card-link">Explore My Repo →</a>
   </div>
 
   <div class="card">
-    <div class="card-icon"><i class="fas fa-terminal"></i></div>
-    <h3 class="card-title">Kali Master</h3>
+    <div class="card-icon">🔍</div>
+    <h3 class="card-title">Information Gathering</h3>
     <p class="card-description">
-      An automated setup and provisioning tool to configure a fresh Kali Linux installation with a standardized set of advanced hacking tools.
+      Active and passive target footprinting, subdomain harvesting, and port discovery tools like <strong>Subfinder</strong>, <strong>Amass</strong>, and <strong>Naabu</strong>.
     </p>
-    <a href="/tools/kali-master/" class="card-link">View Repo</a>
+    <a href="{{ '/tools/information-gathering/' | relative_url }}" class="card-link">Explore Info Gathering →</a>
   </div>
 
   <div class="card">
-    <div class="card-icon"><i class="fas fa-cubes"></i></div>
-    <h3 class="card-title">Lab Manager</h3>
+    <div class="card-icon">📂</div>
+    <h3 class="card-title">Fuzzing & Inputs</h3>
     <p class="card-description">
-      A local virtual machine and container orchestration framework designed for provisioning and deploying vulnerable environments instantly.
+      Directory brute-forcing, JSON API fuzzing, and parameter discovery tools including <strong>FFUF</strong>, <strong>Gobuster</strong>, <strong>Arjun</strong>, and <strong>x8</strong>.
     </p>
-    <a href="/tools/lab-manager/" class="card-link">View Repo</a>
+    <a href="{{ '/tools/fuzzing/' | relative_url }}" class="card-link">Explore Fuzzing Tools →</a>
   </div>
 
   <div class="card">
-    <div class="card-icon"><i class="fas fa-code"></i></div>
-    <h3 class="card-title">Custom Scripts</h3>
+    <div class="card-icon">🔬</div>
+    <h3 class="card-title">Vulnerability Scanning</h3>
     <p class="card-description">
-      A collection of utility scripts including Active Directory enumerators, custom payload builders, and automated recon pipelines.
+      Automated configuration check engines and vulnerability search templates like <strong>Nuclei</strong> (YAML rules), <strong>Nikto</strong>, and <strong>Nmap NSE scripts</strong>.
     </p>
-    <a href="/tools/custom-scripts/" class="card-link">Browse Scripts</a>
+    <a href="{{ '/tools/scanners/' | relative_url }}" class="card-link">Explore Scanners →</a>
   </div>
+
+  <div class="card">
+    <div class="card-icon">⚡</div>
+    <h3 class="card-title">Web Application Exploitation</h3>
+    <p class="card-description">
+      Vulnerability verification and payload engines including <strong>SQLMap</strong> (database extraction), <strong>XSStrike</strong> (XSS context), and <strong>Commix</strong>.
+    </p>
+    <a href="{{ '/tools/web-exploitation/' | relative_url }}" class="card-link">Explore Exploitation →</a>
+  </div>
+
+  <!-- Direct Github Card -->
+  <div class="card" style="border: 1px dashed var(--border-color);">
+    <div class="card-icon"><i class="fab fa-github"></i></div>
+    <h3 class="card-title">Developer GitHub</h3>
+    <p class="card-description">
+      Direct access to the source code repository on my GitHub account. Follow updates, submit pull requests, or fork tools.
+    </p>
+    <a href="https://github.com/vulnquest58" target="_blank" class="card-link">Visit GitHub Profile →</a>
+  </div>
+
 </div>
-
-## Creating a Tool Page
-
-If you want to document a new tool, use the predefined template:
-
-- [Tool Writeup Template](_template.md)

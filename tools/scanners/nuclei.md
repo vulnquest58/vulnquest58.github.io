@@ -2,7 +2,7 @@
 layout: page
 title: "Tool Wiki: Nuclei"
 subtitle: "Fast and customizable template-based vulnerability scanner"
-permalink: /bugbounty/tools/scanners/nuclei/
+permalink: /tools/scanners/nuclei/
 ---
 
 ## <span class="logo-text">Nuclei</span>

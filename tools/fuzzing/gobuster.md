@@ -2,7 +2,7 @@
 layout: page
 title: "Tool Wiki: Gobuster"
 subtitle: "Stable directory, file, and DNS brute-forcer"
-permalink: /bugbounty/tools/fuzzing/gobuster/
+permalink: /tools/fuzzing/gobuster/
 ---
 
 ## <span class="logo-text">Gobuster</span>

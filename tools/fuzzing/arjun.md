@@ -2,7 +2,7 @@
 layout: page
 title: "Tool Wiki: Arjun"
 subtitle: "HTTP parameter discovery suite"
-permalink: /bugbounty/tools/fuzzing/arjun/
+permalink: /tools/fuzzing/arjun/
 ---
 
 ## <span class="logo-text">Arjun</span>

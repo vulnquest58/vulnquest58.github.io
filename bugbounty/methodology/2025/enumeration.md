@@ -29,7 +29,7 @@ kr scan https://api.target.com -A=apiroutes-210228 -o api_endpoints.txt
 ```
 
 ### 🔑 Batch Parameter Fuzzing
-We guess hidden parameters using [Arjun]({{ '/bugbounty/tools/fuzzing/arjun/' | relative_url }}) and [x8]({{ '/bugbounty/tools/fuzzing/x8/' | relative_url }}):
+We guess hidden parameters using [Arjun]({{ '/tools/fuzzing/arjun/' | relative_url }}) and [x8]({{ '/tools/fuzzing/x8/' | relative_url }}):
 
 ```bash
 # Fuzz JSON POST parameter fields
@@ -44,3 +44,4 @@ x8 -u "https://target.com/index.php" -w parameters.txt
 ### 🔗 Navigation
 - [Go to 2025 Vulnerability Analysis Stage]({{ '/bugbounty/methodology/2025/vulnerability-analysis/' | relative_url }})
 - [Return to 2025 Dashboard]({{ '/bugbounty/methodology/2025/' | relative_url }})
+

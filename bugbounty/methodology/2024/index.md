@@ -62,3 +62,4 @@ The 2024 methodology focuses on traditional perimeter testing, passive mapping, 
 
 ### 🔗 Navigation
 - [Return to Methodology Hub]({{ '/bugbounty/methodology/' | relative_url }})
+

@@ -2,13 +2,13 @@
 layout: page
 title: "Tool Wiki: Naabu"
 subtitle: "High-speed TCP/UDP port scanner"
-permalink: /bugbounty/tools/recon/naabu/
+permalink: /tools/information-gathering/naabu/
 ---
 
 ## <span class="logo-text">Naabu</span>
 
 <div class="tool-badges">
-  <span class="badge badge-info">Category: Reconnaissance</span>
+  <span class="badge badge-info">Category: Information Gathering</span>
   <span class="badge badge-success">Language: Go</span>
   <span class="badge badge-warning">Type: Active (Port Scanner)</span>
 </div>
