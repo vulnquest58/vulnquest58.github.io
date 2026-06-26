@@ -7,53 +7,35 @@ permalink: /bugbounty/methodology/
 
 ## Systematic Offensive Auditing
 
-A structured methodology is crucial for successful bug bounty hunting. Having a standardized approach ensures complete coverage of the target's attack surface and increases the likelihood of uncovering critical security issues.
+A structured methodology is crucial for successful bug bounty hunting. Choose a year dashboard to explore the custom methodologies and offensive security tool integrations developed for each era.
 
 <div class="cards-grid">
 
   <div class="card">
-    <div class="card-icon">🔍</div>
-    <h3 class="card-title">1. Reconnaissance</h3>
+    <div class="card-icon">📅</div>
+    <h3 class="card-title">2024 Methodology</h3>
     <p class="card-description">
-      Passive and active asset harvesting, vertical/horizontal subdomain correlation, certificate monitoring, and IP range discovery.
+      Classic Bug Bounty techniques. Focuses on subdomain harvesting, directory brute-forcing with Gobuster, and traditional OWASP Top 10 injection flaws.
     </p>
-    <a href="{{ '/bugbounty/methodology/reconnaissance/' | relative_url }}" class="card-link">Explore Recon →</a>
+    <a href="{{ '/bugbounty/methodology/2024/' | relative_url }}" class="card-link">Explore 2024 Stages →</a>
   </div>
 
-  <div class="card">
-    <div class="card-icon">📂</div>
-    <h3 class="card-title">2. Enumeration</h3>
+  <div class="card" style="border: 1px solid var(--accent-primary);">
+    <div class="card-icon">🚀</div>
+    <h3 class="card-title">2025 Methodology</h3>
     <p class="card-description">
-      Analyzing JS files, directory brute-forcing, API route mapping, technology stack profiling, and hidden parameter discovery.
+      Modern Bug Bounty pipelines. Focuses on JavaScript analysis, GraphQL/REST API schema mapping, SSRF, IDOR, and automated SQLMap/XSStrike flows.
     </p>
-    <a href="{{ '/bugbounty/methodology/enumeration/' | relative_url }}" class="card-link">Explore Enumeration →</a>
+    <a href="{{ '/bugbounty/methodology/2025/' | relative_url }}" class="card-link">Explore 2025 Stages →</a>
   </div>
 
-  <div class="card">
-    <div class="card-icon">🛡️</div>
-    <h3 class="card-title">3. Vulnerability Analysis</h3>
+  <div class="card" style="border: 2px solid var(--accent-primary); box-shadow: var(--shadow-glow);">
+    <div class="card-icon">🛸</div>
+    <h3 class="card-title">2026 Methodology</h3>
     <p class="card-description">
-      Systematic security testing based on the OWASP Top 10, access control logic checks (IDOR, JWT), and server-side vulnerabilities (SSRF, LFI).
+      Next-Gen Bug Bounty. Covers AI-driven discovery, multi-cloud S3/Blob sweeps, single-packet HTTP/2 race conditions, and WAF/EDR bypasses.
     </p>
-    <a href="{{ '/bugbounty/methodology/vulnerability-analysis/' | relative_url }}" class="card-link">Explore Auditing →</a>
-  </div>
-
-  <div class="card">
-    <div class="card-icon">⚡</div>
-    <h3 class="card-title">4. Exploitation</h3>
-    <p class="card-description">
-      Developing minimal and non-destructive Proof of Concept (PoC) scripts in Python/Go, WAF evasion techniques, and calculating severity (CVSS).
-    </p>
-    <a href="{{ '/bugbounty/methodology/exploitation/' | relative_url }}" class="card-link">Explore Exploitation →</a>
-  </div>
-
-  <div class="card">
-    <div class="card-icon">📝</div>
-    <h3 class="card-title">5. Reporting</h3>
-    <p class="card-description">
-      Writing clear, detailed reports containing steps to reproduce, impact mapping, remediation guides, and best practices for triage communication.
-    </p>
-    <a href="{{ '/bugbounty/methodology/reporting/' | relative_url }}" class="card-link">Explore Reporting →</a>
+    <a href="{{ '/bugbounty/methodology/2026/' | relative_url }}" class="card-link">Explore 2026 Stages →</a>
   </div>
 
 </div>
