@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initSmoothScroll();
   initScrollAnimations();
   initSearch();
+  initChallengeFilters();
 });
 
 // Mobile Menu Toggle
@@ -121,3 +122,33 @@ if (document.readyState === 'complete') {
 console.log('%c🛡️ VulnQuest Portfolio', 'font-size: 24px; font-weight: bold; color: #00d9ff;');
 console.log('%cBuilt with passion for offensive security', 'font-size: 14px; color: #7c3aed;');
 console.log('%cLooking for vulnerabilities? You\'re in the right place! 🔍', 'font-size: 12px; color: #10b981;');
+
+// Challenge Year Filtering
+function initChallengeFilters() {
+  const filterBtns = document.querySelectorAll('.challenge-year-nav .mf-btn');
+  const cards = document.querySelectorAll('.challenge-card');
+
+  if (filterBtns.length === 0 || cards.length === 0) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Remove active from all sibling buttons
+      const container = this.closest('.challenge-year-nav');
+      if (container) {
+        container.querySelectorAll('.mf-btn').forEach(b => b.classList.remove('active'));
+      }
+      this.classList.add('active');
+
+      const filter = this.dataset.filter;
+
+      cards.forEach(card => {
+        if (filter === 'all' || card.dataset.year === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
