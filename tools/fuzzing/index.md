@@ -5,11 +5,11 @@ subtitle: "Tools for directory brute-forcing, API fuzzing, and input discovery"
 permalink: /tools/fuzzing/
 ---
 
-## 📂 Fuzzing & Parameter Discovery (التخمين وفحص المدخلات)
+## 📂 Fuzzing & Parameter Discovery
 
 Fuzzing and parameter discovery allow penetration testers to map hidden routes, variables, and administrative files that are not visible in standard web links.
 
-### Tool Catalog (أدوات التخمين والتنقيب)
+### Tool Catalog
 
 Select a tool below to view detailed specifications, mechanics, and cheatsheet commands.
 

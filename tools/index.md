@@ -14,7 +14,7 @@ A centralized index of custom-developed utilities, configurations, and industry-
   <!-- Special myrepo Card -->
   <div class="card my-repo-card" style="border: 2px solid var(--accent-primary);">
     <div class="card-icon">🛠️</div>
-    <h3 class="card-title">myrepo (مايريبو)</h3>
+    <h3 class="card-title">myrepo</h3>
     <p class="card-description">
       In-house custom tools and developer automations including <strong>Vulntrace</strong> (syscall tracer), <strong>Kali Master</strong>, and <strong>Lab Manager</strong>.
     </p>

@@ -5,7 +5,7 @@ subtitle: "Terminal multiplexers, JSON parsers, and data formatting scripts"
 permalink: /tools/general-utilities/
 ---
 
-## 🧰 General Purpose & Utilities (الأدوات العامة المساعدة)
+## 🧰 General Purpose & Utilities
 
 This category focuses on productivity tools, script processors, text formatters, and terminal setup helpers used during testing workflows.
 

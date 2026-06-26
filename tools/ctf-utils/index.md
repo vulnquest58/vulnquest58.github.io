@@ -5,7 +5,7 @@ subtitle: "Utilities for web challenges, cryptanalysis, steganography, and binar
 permalink: /tools/ctf-utils/
 ---
 
-## 🏁 Capture The Flag - CTF Tools (تحديات التقاط العلم)
+## 🏁 Capture The Flag - CTF Tools
 
 This category focuses on tools designed to crack cryptographic hashes, carve images for steganography, parse PCAPs in forensics, and compile exploit ROP chains for binary exploitation challenges.
 

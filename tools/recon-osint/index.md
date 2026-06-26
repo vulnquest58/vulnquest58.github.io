@@ -5,11 +5,11 @@ subtitle: "Tools for passive footprinting and active target scans"
 permalink: /tools/recon-osint/
 ---
 
-## 🌐 Reconnaissance & OSINT (الاستطلاع والجمع المفتوح للبيانات)
+## 🌐 Reconnaissance & OSINT
 
 This category focuses on information gathering and reconnaissance, split between passive footprinting and active network scanning.
 
-### Tool Catalog (أدوات الاستطلاع)
+### Tool Catalog
 
 Select a tool below to view detailed specifications, cheatsheets, or definitions.
 

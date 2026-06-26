@@ -5,7 +5,7 @@ subtitle: "Decompiling and dynamically auditing Android and iOS applications"
 permalink: /tools/mobile-security/
 ---
 
-## 📱 Mobile Security (أمن الهواتف المحمولة)
+## 📱 Mobile Security
 
 This category focuses on static decompilation of APK/IPA files, dynamic instrumentation of classes at runtime, and assessment dashboards.
 

@@ -5,11 +5,11 @@ subtitle: "Automated vulnerability scanning and security testing tools"
 permalink: /tools/scanners/
 ---
 
-## 🔬 Vulnerability Scanning (فحص الثغرات الآلي)
+## 🔬 Vulnerability Scanning
 
 Vulnerability scanners automate the detection of configuration issues, open paths, known CVE signatures, and database/server vulnerabilities.
 
-### Tool Catalog (أدوات فحص الثغرات)
+### Tool Catalog
 
 Select a tool below to view detailed specifications, mechanics, and cheatsheet commands.
 

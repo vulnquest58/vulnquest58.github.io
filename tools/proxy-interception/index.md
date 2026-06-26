@@ -5,7 +5,7 @@ subtitle: "Web proxies, packet decoders, and traffic analyzers"
 permalink: /tools/proxy-interception/
 ---
 
-## 🔧 Proxy & Interception (فحص وحظر زيارات الويب)
+## 🔧 Proxy & Interception
 
 This category focuses on tools designed to intercept, modify, replay, and decode raw HTTP/HTTPS traffic between the client's browser and backend servers.
 

@@ -5,11 +5,11 @@ subtitle: "Tools for directory fuzzing, tech fingerprinting, and script analysis
 permalink: /tools/web-security/
 ---
 
-## 🕸️ Web Application Security (أمن تطبيقات الويب)
+## 🕸️ Web Application Security
 
 This category hosts scanning, directory brute-forcing, JavaScript analysis, and parameter parsing tools to evaluate vulnerabilities in web environments.
 
-### Tool Catalog (أدوات أمن الويب)
+### Tool Catalog
 
 Select a tool below to view detailed specifications, cheatsheets, or definitions.
 

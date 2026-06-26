@@ -5,7 +5,7 @@ subtitle: "Automation engines, subdomain takeovers, and repository miners"
 permalink: /tools/bugbounty-specific/
 ---
 
-## 🐛 Bug Bounty Specific Tools (أدوات صيد الثغرات المخصصة)
+## 🐛 Bug Bounty Specific Tools
 
 This category collects automated recon pipelines, subdomain takeover checkers, secret scanning hooks, and report compilers.
 

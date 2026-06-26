@@ -5,7 +5,7 @@ subtitle: "Decompilers, debuggers, static analysis tools, and malware sandboxes"
 permalink: /tools/reverse-engineering/
 ---
 
-## 🔬 Reverse Engineering (الهندسة العكسية)
+## 🔬 Reverse Engineering
 
 This category collects disassemblers, decompilers, binary analysis utilities, system call tracers, and sandboxes designed to inspect compiled applications.
 

@@ -5,7 +5,7 @@ subtitle: "Auditing tools for AWS, Azure, and Google Cloud environments"
 permalink: /tools/cloud-security/
 ---
 
-## 🌩️ Cloud Security (أمن الحوسبة السحابية)
+## 🌩️ Cloud Security
 
 This category focuses on tools designed to audit configurations, expose weak IAM privileges, map assets, and exploit exposed storage buckets on major cloud providers.
 

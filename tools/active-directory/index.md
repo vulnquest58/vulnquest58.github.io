@@ -5,7 +5,7 @@ subtitle: "Tools for AD path visualization, SMB relays, and Kerberos attacks"
 permalink: /tools/active-directory/
 ---
 
-## 🛡️ Active Directory & Internal Pentest (فحص خوادم الشبكة الداخلية)
+## 🛡️ Active Directory & Internal Pentest
 
 This category focuses on Active Directory domain enumeration, lateral movement, Kerberos authentication attacks, and internal protocol poisoning.
 

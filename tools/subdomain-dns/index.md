@@ -5,11 +5,11 @@ subtitle: "Tools for mapping subdomains and DNS routing spaces"
 permalink: /tools/subdomain-dns/
 ---
 
-## 🔍 Subdomain Enumeration & DNS (جمع نطاقات الـ DNS الفرعية)
+## 🔍 Subdomain Enumeration & DNS
 
 Subdomain enumeration and DNS brute-forcing are critical steps to discover the hidden components of a target's infrastructure.
 
-### Tool Catalog (أدوات النطاقات الفرعية)
+### Tool Catalog
 
 Select a tool below to view detailed specifications, cheatsheets, or definitions.
 

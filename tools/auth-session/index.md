@@ -5,7 +5,7 @@ subtitle: "Tools for brute-forcing accounts and auditing session tokens"
 permalink: /tools/auth-session/
 ---
 
-## 🔐 Authentication & Session Testing (اختبار المصادقة والجلسات)
+## 🔐 Authentication & Session Testing
 
 This category focuses on tools designed to brute-force web login protocols, dissect and forge JSON Web Tokens (JWT), and map out OAuth authorization flaws.
 

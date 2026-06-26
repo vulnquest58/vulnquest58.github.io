@@ -5,7 +5,7 @@ subtitle: "In-house offensive tooling and automation scripts"
 permalink: /tools/my-repo/
 ---
 
-## 🛠️ In-House Development & Automations (مايريبو)
+## 🛠️ In-House Development & Automations
 
 A catalog of custom-built offensive security tools and utility setups. Select any card below to view detailed specifications, design blueprints, and execution guides.
 
