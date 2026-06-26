@@ -5,24 +5,24 @@
 /* === Variables === */
 :root {
   /* Colors */
-  --bg-primary: #0a0e27;
-  --bg-secondary: #111633;
-  --bg-tertiary: #1a1f3a;
-  --bg-card: #151a35;
+  --bg-primary: #06070a;
+  --bg-secondary: #0c0e14;
+  --bg-tertiary: #131620;
+  --bg-card: #0e111a;
 
-  --text-primary: #e4e6eb;
-  --text-secondary: #b0b3b8;
-  --text-muted: #8a8d91;
+  --text-primary: #e6e8ee;
+  --text-secondary: #a3a8b8;
+  --text-muted: #6c7282;
 
-  --accent-primary: #00d9ff;
-  --accent-secondary: #7c3aed;
-  --accent-success: #10b981;
-  --accent-warning: #f59e0b;
-  --accent-danger: #ef4444;
+  --accent-primary: #ff003c;
+  --accent-secondary: #ff6b00;
+  --accent-success: #00e676;
+  --accent-warning: #ffd600;
+  --accent-danger: #ff1744;
 
-  --gradient-primary: linear-gradient(135deg, #00d9ff 0%, #7c3aed 100%);
-  --gradient-dark: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
-  --gradient-card: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+  --gradient-primary: linear-gradient(135deg, #ff003c 0%, #ff6b00 100%);
+  --gradient-dark: linear-gradient(135deg, #06070a 0%, #131620 100%);
+  --gradient-card: linear-gradient(135deg, rgba(255, 0, 60, 0.08) 0%, rgba(255, 107, 0, 0.08) 100%);
 
   /* Typography */
   --font-primary: 'Inter', 'Cairo', sans-serif;
@@ -39,13 +39,13 @@
   /* Borders */
   --border-radius: 8px;
   --border-radius-lg: 12px;
-  --border-color: rgba(255, 255, 255, 0.1);
+  --border-color: rgba(255, 255, 255, 0.06);
 
   /* Shadows */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 20px rgba(0, 217, 255, 0.3);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 20px rgba(255, 0, 60, 0.25);
 
   /* Transitions */
   --transition: all 0.3s ease;
@@ -79,8 +79,8 @@ body::before {
   width: 100%;
   height: 100%;
   background:
-    radial-gradient(circle at 20% 50%, rgba(0, 217, 255, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(255, 0, 60, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 107, 0, 0.03) 0%, transparent 50%);
   pointer-events: none;
   z-index: -1;
 }
