@@ -61,6 +61,6 @@ The 2026 methodology covers next-generation vulnerability hunting, targeting clo
 ---
 
 ### 🔗 Navigation
-- [Return to Methodology Hub]({{ '/bugbounty/methodology/' | relative_url }})
+- [Return to Methodology Hub]({{ '/bugbounty/' | relative_url }})
 
 

@@ -1,75 +1,59 @@
 ---
 layout: page
-title: Bug Bounty
-subtitle: Professional vulnerability hunting and disclosure
-description: "Bug Bounty hunting methodologies, writeups, tools, and proven techniques for finding critical vulnerabilities"
+title: "Bug Bounty Hub"
+subtitle: "Professional vulnerability hunting methodologies, writeups, and tools"
+permalink: /bugbounty/
 ---
 
-## Overview
+## Vulnerability Hunting Hub
 
-Bug bounty hunting is my primary focus in offensive security. I specialize in finding critical vulnerabilities in web applications, APIs, and complex systems through systematic reconnaissance and creative exploitation techniques.
+Welcome to my Bug Bounty portal. Here you can explore my structured methodologies across different eras, read detailed writeups from real-world operations, and view the specialized tools catalog.
 
-## My Approach
+<div class="cards-grid">
 
-### Methodology
+  <div class="card">
+    <div class="card-icon">📅</div>
+    <h3 class="card-title">2024 Methodology</h3>
+    <p class="card-description">
+      Classic Bug Bounty. Focuses on passive subdomain harvesting, directory fuzzing, and traditional web injection flaws (SQLi, XSS, LFI).
+    </p>
+    <a href="{{ '/bugbounty/methodology/2024/' | relative_url }}" class="card-link">Explore 2024 Stages →</a>
+  </div>
 
-1. **Reconnaissance** - Comprehensive asset discovery and mapping
-2. **Enumeration** - Deep dive into technologies, endpoints, and parameters
-3. **Vulnerability Analysis** - Systematic testing for security flaws
-4. **Exploitation** - Proof of concept development
-5. **Reporting** - Clear, actionable reports with impact assessment
+  <div class="card" style="border: 1px solid var(--accent-primary);">
+    <div class="card-icon">🚀</div>
+    <h3 class="card-title">2025 Methodology</h3>
+    <p class="card-description">
+      Modern Bug Bounty. Focuses on JavaScript analysis, GraphQL/REST API schema mapping, SSRF, IDOR, and automated SQLMap/XSStrike flows.
+    </p>
+    <a href="{{ '/bugbounty/methodology/2025/' | relative_url }}" class="card-link">Explore 2025 Stages →</a>
+  </div>
 
-### Vulnerability Types
+  <div class="card" style="border: 2px solid var(--accent-primary); box-shadow: var(--shadow-glow);">
+    <div class="card-icon">🛸</div>
+    <h3 class="card-title">2026 Methodology</h3>
+    <p class="card-description">
+      Next-Gen Bug Bounty. Covers AI-driven discovery, multi-cloud S3/Blob sweeps, single-packet HTTP/2 race conditions, and WAF/EDR bypasses.
+    </p>
+    <a href="{{ '/bugbounty/methodology/2026/' | relative_url }}" class="card-link">Explore 2026 Stages →</a>
+  </div>
 
-| Category | Examples | Severity |
-|----------|----------|----------|
-| **Injection** | SQLi, Command Injection, LDAP | Critical |
-| **Authentication** | Bypass, Brute Force, JWT flaws | High |
-| **Authorization** | IDOR, Privilege Escalation | High |
-| **XSS** | Reflected, Stored, DOM-based | Medium-High |
-| **SSRF** | Internal service access, Cloud metadata | Critical |
-| **RCE** | Remote Code Execution | Critical |
-| **Business Logic** | Payment bypass, Race conditions | Variable |
+  <div class="card">
+    <div class="card-icon">📝</div>
+    <h3 class="card-title">Writeups & Templates</h3>
+    <p class="card-description">
+      Detailed writeups of real-world bug bounty hunts showing step-by-step reproduction, and access to standard Markdown templates.
+    </p>
+    <a href="{{ '/bugbounty/writeups/' | relative_url }}" class="card-link">Browse Writeups →</a>
+  </div>
 
-## Platforms
+  <div class="card">
+    <div class="card-icon">🧰</div>
+    <h3 class="card-title">Tools Collection</h3>
+    <p class="card-description">
+      A collection of all the tools utilized during my bug bounty operations, with links to their usage guides in the main Tools section.
+    </p>
+    <a href="{{ '/bugbounty/tools-collection/' | relative_url }}" class="card-link">View Tools Collection →</a>
+  </div>
 
-I actively hunt on:
-
-- **HackerOne** - Top-tier programs
-- **Bugcrowd** - Diverse targets
-- **Intigriti** - European programs
-- **YesWeHack** - International scope
-- **Independent Programs** - Direct vendor relationships
-
-## Writeups
-
-Detailed writeups of my findings (with responsible disclosure):
-
-{% for writeup in site.pages %}
-  {% if writeup.path contains 'bugbounty/writeups' and writeup.title != 'Writeup Template' %}
-- [{{ writeup.title }}]({{ writeup.url | relative_url }})
-  {% endif %}
-{% endfor %}
-
-## Tools & Techniques
-
-Custom tools and techniques I've developed for bug bounty:
-
-- **Automated Reconnaissance Pipelines**
-- **Parameter Discovery Tools**
-- **Vulnerability Scanners**
-- **Report Generation Scripts**
-
-## Stats
-
-- **Bugs Reported**: 100+
-- **Critical Vulnerabilities**: 25+
-- **Bounties Earned**: $50,000+
-- **Platforms**: 5+
-- **Programs**: 50+
-
-## Resources
-
-- [Methodology Guide](methodology.md)
-- [Writeup Template](writeups/_template.md)
-- [Tools Collection](tools/index.md)
+</div>

@@ -24,6 +24,6 @@ We use the CVSS v3.1 calculator to define severity (Low, Medium, High, Critical)
 
 ### 🔗 Navigation
 - [Return to 2024 Dashboard]({{ '/bugbounty/methodology/2024/' | relative_url }})
-- [Return to Methodology Hub]({{ '/bugbounty/methodology/' | relative_url }})
+- [Return to Methodology Hub]({{ '/bugbounty/' | relative_url }})
 
 

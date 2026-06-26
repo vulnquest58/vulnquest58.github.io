@@ -25,6 +25,6 @@ A professional report must demonstrate **real-world impact**:
 
 ### 🔗 Navigation
 - [Return to 2025 Dashboard]({{ '/bugbounty/methodology/2025/' | relative_url }})
-- [Return to Methodology Hub]({{ '/bugbounty/methodology/' | relative_url }})
+- [Return to Methodology Hub]({{ '/bugbounty/' | relative_url }})
 
 

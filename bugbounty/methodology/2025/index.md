@@ -61,6 +61,6 @@ The 2025 methodology covers modern offensive pipelines, JavaScript analysis, aut
 ---
 
 ### 🔗 Navigation
-- [Return to Methodology Hub]({{ '/bugbounty/methodology/' | relative_url }})
+- [Return to Methodology Hub]({{ '/bugbounty/' | relative_url }})
 
 
