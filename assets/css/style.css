@@ -103,7 +103,7 @@ body::before {
 
 /* === Header === */
 .site-header {
-  background: rgba(10, 14, 39, 0.95);
+  background: rgba(7, 6, 10, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
   position: sticky;
