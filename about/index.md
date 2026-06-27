@@ -16,6 +16,9 @@ I am an offensive security engineer passionate about vulnerability research, exp
 - **OSWE** - Offensive Security Web Expert
 - **HackerOne Top 500** - Bug Bounty Recognition
 
+[View Detailed Certifications Matrix]({{ '/certifications/' | relative_url }})
+
+
 ## Technical Expertise
 
 ### Languages
