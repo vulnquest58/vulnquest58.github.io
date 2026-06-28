@@ -61,6 +61,23 @@ A curated collection of real-world bug bounty writeups. These reports detail the
     <a href="{{ '/bugbounty/writeups/ssrf-aws-leak/' | relative_url }}" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.85rem; flex-shrink: 0; text-decoration: none;">Read Report →</a>
   </div>
 
+  <!-- Container Escape Writeup -->
+  <div class="card" style="display: flex; align-items: center; gap: var(--spacing-md); padding: var(--spacing-md); border-left: 3px solid var(--accent-danger); background: rgba(220,38,38,0.04);">
+    <div class="card-icon" style="font-size: 2rem; margin-bottom: 0;">🐳</div>
+    <div style="flex-grow: 1;">
+      <h3 class="card-title" style="margin-bottom: 2px;">Container Escape: User to Host Root — Full Chain</h3>
+      <p class="card-description" style="margin-bottom: 4px; font-size: 0.9rem;">
+        <span class="badge badge-danger">Critical</span> Complete attack chain: www-data → Container Root (SUID find) → Host User (privileged mount) → Host Root (Docker group).
+      </p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;">
+        <span style="background:rgba(124,58,237,0.12);color:#a78bfa;border:1px solid rgba(124,58,237,0.3);padding:1px 7px;border-radius:4px;font-size:0.75rem;">Container Escape</span>
+        <span style="background:rgba(15,160,70,0.12);color:#4ade80;border:1px solid rgba(15,160,70,0.3);padding:1px 7px;border-radius:4px;font-size:0.75rem;">CTF</span>
+        <span style="background:rgba(220,38,38,0.12);color:#f87171;border:1px solid rgba(220,38,38,0.3);padding:1px 7px;border-radius:4px;font-size:0.75rem;">Privilege Escalation</span>
+      </div>
+    </div>
+    <a href="{{ '/bugbounty/writeups/container-escape-ctf/' | relative_url }}" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.85rem; flex-shrink: 0; text-decoration: none;">Read Report →</a>
+  </div>
+
 </div>
 
 ---
