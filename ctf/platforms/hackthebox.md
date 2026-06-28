@@ -40,6 +40,23 @@ platform: HackTheBox
     <div class="mc-left">
       <span class="mc-os linux">🐧</span>
       <div>
+        <h4 class="mc-name">WingData</h4>
+        <span class="mc-ip">10.129.244.106</span>
+      </div>
+    </div>
+    <div class="mc-mid">
+      <span class="mc-tech">CVE-2025-47812 Wing FTP Null-Byte Lua RCE · SHA256 Hash Cracking · CVE-2025-4517 Python tarfile Arbitrary Write</span>
+    </div>
+    <div class="mc-right">
+      <span class="mc-diff easy">Easy</span>
+      <a href="{{ '/ctf/platforms/hackthebox/wingdata/' | relative_url }}" class="mc-btn">Writeup →</a>
+    </div>
+  </div>
+
+  <div class="machine-card" data-os="linux" data-diff="easy">
+    <div class="mc-left">
+      <span class="mc-os linux">🐧</span>
+      <div>
         <h4 class="mc-name">OpenAdmin</h4>
         <span class="mc-ip">10.10.10.171</span>
       </div>
