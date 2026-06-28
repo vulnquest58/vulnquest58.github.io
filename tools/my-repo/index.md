@@ -132,6 +132,26 @@ A catalog of custom-built offensive security tools and utility setups. Select an
     </div>
   </div>
 
+  <div class="card" style="display: flex; align-items: center; gap: var(--spacing-md); padding: var(--spacing-md); border: 1px solid rgba(168,85,247,0.4); background: rgba(168,85,247,0.04);">
+    <div class="card-icon" style="font-size: 2.2rem; margin-bottom: 0;">🐚</div>
+    <div style="flex-grow: 1;">
+      <h3 class="card-title" style="margin-bottom: 2px;">NexShell</h3>
+      <p class="card-description" style="margin-bottom: 0; font-size: 0.9rem;">
+        Elite reverse shell commander — cross-platform (Linux/Windows/macOS), 15+ payloads, AMSI bypass, AD Recon, Persistence, Container Escape. No dependencies.
+      </p>
+      <div style="margin-top: 6px; display:flex; gap:6px; flex-wrap:wrap;">
+        <span style="background:rgba(168,85,247,0.15);color:#a78bfa;border:1px solid rgba(168,85,247,0.35);padding:2px 8px;border-radius:4px;font-size:0.75rem;font-family:var(--font-mono);">Python 3.6+</span>
+        <span style="background:rgba(15,160,70,0.12);color:#4ade80;border:1px solid rgba(15,160,70,0.3);padding:2px 8px;border-radius:4px;font-size:0.75rem;">Linux · Windows · macOS</span>
+        <span style="background:rgba(6,182,212,0.12);color:#22d3ee;border:1px solid rgba(6,182,212,0.3);padding:2px 8px;border-radius:4px;font-size:0.75rem;">No Dependencies</span>
+        <span style="background:rgba(239,68,68,0.12);color:#f87171;border:1px solid rgba(239,68,68,0.3);padding:2px 8px;border-radius:4px;font-size:0.75rem;">Red Team</span>
+      </div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:6px; flex-shrink:0;">
+      <a href="{{ '/tools/my-repo/nexshell/' | relative_url }}" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.85rem; text-decoration: none;">View Guide →</a>
+      <a href="https://github.com/vulnquest58/nexshell" target="_blank" class="btn btn-primary" style="padding: 6px 12px; font-size: 0.85rem; text-decoration: none; box-shadow:none;"><i class="fab fa-github"></i> GitHub</a>
+    </div>
+  </div>
+
   <div class="card" style="display: flex; align-items: center; gap: var(--spacing-md); padding: var(--spacing-md); border: 2px dashed var(--border-color);">
     <div class="card-icon" style="font-size: 2.2rem; margin-bottom: 0;"><i class="fab fa-github"></i></div>
     <div style="flex-grow: 1;">
