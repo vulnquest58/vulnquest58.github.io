@@ -142,10 +142,10 @@ permalink: /
       </div>
       
       <div class="hud-telemetry">
-        <div class="hud-item">SYS_STATUS: <span>ACTIVE_OPERATIONAL</span></div>
-        <div class="hud-item">TARGET_SCOPE: <span>COMPREHENSIVE_AUDIT</span></div>
-        <div class="hud-item">IP_ROUTING: <span>TUNNEL_SECURE_TLS</span></div>
-        <div class="hud-item">ACTIVE_LABS: <span>4_ENVIRONMENTS</span></div>
+        <div class="hud-item">OPERATOR: <span>VULNQUEST</span></div>
+        <div class="hud-item">PLATFORM_STATUS: <span>HTB_PRO_HACKER</span></div>
+        <div class="hud-item">ACTIVE_BOUNTIES: <span>H1 · INTIGRITI · BUGCROWD</span></div>
+        <div class="hud-item">MACHINES_PWNED: <span>40+ ROOTED</span></div>
       </div>
     </div>
   </div>
