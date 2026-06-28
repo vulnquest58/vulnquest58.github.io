@@ -70,6 +70,7 @@ A catalog of custom-built offensive security tools and utility setups. Select an
       </div>
     </div>
     <div style="display:flex; flex-direction:column; gap:6px; flex-shrink:0;">
+      <a href="{{ '/tools/my-repo/uac-apex/' | relative_url }}" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.85rem; text-decoration: none;">View Report →</a>
       <a href="https://github.com/vulnquest58/uac-apex-framework" target="_blank" class="btn btn-primary" style="padding: 6px 12px; font-size: 0.85rem; text-decoration: none; box-shadow:none;"><i class="fab fa-github"></i> GitHub</a>
     </div>
   </div>
