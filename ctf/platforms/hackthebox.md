@@ -53,6 +53,23 @@ platform: HackTheBox
     </div>
   </div>
 
+  <div class="machine-card" data-os="linux" data-diff="medium">
+    <div class="mc-left">
+      <span class="mc-os linux">🐧</span>
+      <div>
+        <h4 class="mc-name">VariaType</h4>
+        <span class="mc-ip">10.129.244.202</span>
+      </div>
+    </div>
+    <div class="mc-mid">
+      <span class="mc-tech">Git Leak · Dir Traversal · CVE-2025-66034 fontTools Webshell · CVE-2024-25081 FontForge Injection · CVE-2025-47273 setuptools LPE</span>
+    </div>
+    <div class="mc-right">
+      <span class="mc-diff medium">Medium</span>
+      <a href="{{ '/ctf/platforms/hackthebox/variatype/' | relative_url }}" class="mc-btn">Writeup →</a>
+    </div>
+  </div>
+
   <div class="machine-card" data-os="linux" data-diff="easy">
     <div class="mc-left">
       <span class="mc-os linux">🐧</span>
