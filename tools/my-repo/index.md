@@ -55,6 +55,25 @@ A catalog of custom-built offensive security tools and utility setups. Select an
     <a href="{{ '/tools/custom-scripts/' | relative_url }}" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.85rem; flex-shrink: 0; text-decoration: none;">View Wiki →</a>
   </div>
 
+  <div class="card" style="display: flex; align-items: center; gap: var(--spacing-md); padding: var(--spacing-md); border: 1px solid rgba(59,130,246,0.35); background: rgba(59,130,246,0.04);">
+    <div class="card-icon" style="font-size: 2.2rem; margin-bottom: 0;">🛡️</div>
+    <div style="flex-grow: 1;">
+      <h3 class="card-title" style="margin-bottom: 2px;">UAC Apex Framework (AEF) v4.0</h3>
+      <p class="card-description" style="margin-bottom: 0; font-size: 0.9rem;">
+        Enterprise-grade adaptive UAC elevation framework for Windows. Context-aware technique selection, pre-flight risk scoring, retry/fallback orchestration, and full cleanup pipeline.
+      </p>
+      <div style="margin-top: 6px; display:flex; gap:6px; flex-wrap:wrap;">
+        <span style="background:rgba(59,130,246,0.15);color:#93c5fd;border:1px solid rgba(59,130,246,0.35);padding:2px 8px;border-radius:4px;font-size:0.75rem;font-family:var(--font-mono);">C++17</span>
+        <span style="background:rgba(124,58,237,0.12);color:#a78bfa;border:1px solid rgba(124,58,237,0.3);padding:2px 8px;border-radius:4px;font-size:0.75rem;font-family:var(--font-mono);">Windows</span>
+        <span style="background:rgba(15,160,70,0.12);color:#4ade80;border:1px solid rgba(15,160,70,0.3);padding:2px 8px;border-radius:4px;font-size:0.75rem;">v4.0.0</span>
+        <span style="background:rgba(234,179,8,0.12);color:#fbbf24;border:1px solid rgba(234,179,8,0.3);padding:2px 8px;border-radius:4px;font-size:0.75rem;">CMake</span>
+      </div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:6px; flex-shrink:0;">
+      <a href="https://github.com/vulnquest58/uac-apex-framework" target="_blank" class="btn btn-primary" style="padding: 6px 12px; font-size: 0.85rem; text-decoration: none; box-shadow:none;"><i class="fab fa-github"></i> GitHub</a>
+    </div>
+  </div>
+
   <div class="card" style="display: flex; align-items: center; gap: var(--spacing-md); padding: var(--spacing-md); border: 1px solid rgba(220,38,38,0.35); background: rgba(220,38,38,0.05);">
     <div class="card-icon" style="font-size: 2.2rem; margin-bottom: 0;">💀</div>
     <div style="flex-grow: 1;">
