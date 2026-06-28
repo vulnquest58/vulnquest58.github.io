@@ -36,5 +36,55 @@
   {% include footer.html %}
   
   <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+
+  {% if page.mermaid %}
+  <!-- Step 1: Convert Jekyll mermaid code blocks to div.mermaid (must run before module) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('code.language-mermaid').forEach(function(codeEl) {
+        var pre = codeEl.parentElement;
+        var div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = codeEl.textContent;
+        pre.replaceWith(div);
+      });
+    });
+  </script>
+  <!-- Step 2: Initialize Mermaid.js -->
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        darkMode: true,
+        background: '#0d0d0d',
+        primaryColor: '#7c3aed',
+        primaryTextColor: '#e2e8f0',
+        primaryBorderColor: '#4c1d95',
+        lineColor: '#a78bfa',
+        secondaryColor: '#1e1b4b',
+        tertiaryColor: '#1a1a2e',
+        edgeLabelBackground: '#1a1a2e',
+        nodeBorder: '#7c3aed',
+        clusterBkg: '#1e1b4b',
+        titleColor: '#e2e8f0',
+        fontFamily: 'JetBrains Mono, monospace'
+      }
+    });
+  </script>
+  <style>
+    .mermaid {
+      background: rgba(124, 58, 237, 0.05);
+      border: 1px solid rgba(124, 58, 237, 0.25);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      text-align: center;
+      overflow-x: auto;
+    }
+    .mermaid svg { max-width: 100%; height: auto; }
+  </style>
+  {% endif %}
 </body>
 </html>
