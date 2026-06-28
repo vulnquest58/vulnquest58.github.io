@@ -269,8 +269,6 @@ TechniqueRegistry::instance().register_technique(
 
 ---
 
-<div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-top:1.5rem;">
-  <a href="{{ '/redteam/' | relative_url }}" class="btn btn-secondary" style="text-decoration:none; font-size:0.9rem;">← Red Teaming</a>
-  <a href="{{ '/tools/my-repo/' | relative_url }}" class="btn btn-secondary" style="text-decoration:none; font-size:0.9rem;">← My Repo</a>
-  <a href="https://github.com/vulnquest58/uac-apex-framework" target="_blank" class="btn btn-primary" style="text-decoration:none; font-size:0.9rem;"><i class="fab fa-github"></i> GitHub</a>
+<div style="margin-top:1.5rem;">
+  <a href="https://github.com/vulnquest58/uac-apex-framework" target="_blank" class="btn btn-primary" style="text-decoration:none; font-size:0.9rem;"><i class="fab fa-github"></i> GitHub Repository</a>
 </div>
