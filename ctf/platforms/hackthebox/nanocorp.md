@@ -2,7 +2,7 @@
 layout: page
 title: "HTB: NanoCorp"
 subtitle: "CVE-2025-24071 NTLM Leak · BloodHound ACL Abuse · CVE-2024-0670 Checkmk LPE"
-permalink: /ctf/writeups/hackthebox/nanocorp/
+permalink: /ctf/platforms/hackthebox/nanocorp/
 platform: HackTheBox
 machine_name: NanoCorp
 difficulty: Hard

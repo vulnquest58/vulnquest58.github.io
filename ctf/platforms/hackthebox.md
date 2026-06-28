@@ -248,9 +248,27 @@ platform: HackTheBox
     </div>
   </div>
 
+  <div class="machine-card" data-os="windows" data-diff="hard">
+    <div class="mc-left">
+      <span class="mc-os windows">🪟</span>
+      <div>
+        <h4 class="mc-name">NanoCorp</h4>
+        <span class="mc-ip">10.129.243.199</span>
+      </div>
+    </div>
+    <div class="mc-mid">
+      <span class="mc-tech">CVE-2025-24071 .library-ms NTLM Leak · BloodHound ACL Abuse · Protected Users Kerberos · CVE-2024-0670 Checkmk LPE</span>
+    </div>
+    <div class="mc-right">
+      <span class="mc-diff hard">Hard</span>
+      <a href="{{ '/ctf/platforms/hackthebox/nanocorp/' | relative_url }}" class="mc-btn">Writeup →</a>
+    </div>
+  </div>
+
 </div>
 
 ---
+
 
 ## 🏢 Active Directory Machines
 
