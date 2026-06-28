@@ -11,10 +11,37 @@ permalink: /ctf/platforms/hackmyvm/
     <h2>HackMyVM</h2>
     <p>A community-driven hacking platform featuring custom-built machines designed to test lateral thinking and enumeration.</p>
     <div class="plat-hero-badges">
-      <span class="badge badge-success">Rank: Top 50</span>
-      <span class="badge badge-info">20+ VMs Solved</span>
-      <span class="badge badge-warning">Active Contributor</span>
+      <span class="badge badge-success">Rank: #77 Global</span>
+      <span class="badge badge-info">1,214 Points · [WTF]</span>
+      <span class="badge badge-warning">104 Machines Rooted</span>
     </div>
+  </div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:0.6rem;margin:1rem 0 1.5rem;">
+  <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border-color);border-radius:8px;padding:0.75rem;text-align:center;">
+    <div style="font-size:1.6rem;font-weight:800;color:#4ade80;font-family:var(--font-mono);">104</div>
+    <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-top:2px;">Total Roots</div>
+  </div>
+  <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border-color);border-radius:8px;padding:0.75rem;text-align:center;">
+    <div style="font-size:1.6rem;font-weight:800;color:#93c5fd;font-family:var(--font-mono);">103</div>
+    <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-top:2px;">Total Users</div>
+  </div>
+  <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border-color);border-radius:8px;padding:0.75rem;text-align:center;">
+    <div style="font-size:1.6rem;font-weight:800;color:#f87171;font-family:var(--font-mono);">3</div>
+    <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-top:2px;">First Roots 🩸</div>
+  </div>
+  <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border-color);border-radius:8px;padding:0.75rem;text-align:center;">
+    <div style="font-size:1.6rem;font-weight:800;color:#fbbf24;font-family:var(--font-mono);">1</div>
+    <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-top:2px;">First User 🩸</div>
+  </div>
+  <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border-color);border-radius:8px;padding:0.75rem;text-align:center;">
+    <div style="font-size:1.6rem;font-weight:800;color:#a78bfa;font-family:var(--font-mono);">9</div>
+    <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-top:2px;">Challenges</div>
+  </div>
+  <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border-color);border-radius:8px;padding:0.75rem;text-align:center;">
+    <div style="font-size:1.6rem;font-weight:800;color:#4ade80;font-family:var(--font-mono);">#77</div>
+    <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-top:2px;">Global Rank</div>
   </div>
 </div>
 
